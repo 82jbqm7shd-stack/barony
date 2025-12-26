@@ -103,34 +103,45 @@
   </style>
 
   <!-- JSON-LD structured data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebPage",
-        "@id": "https://barony.markhopking.co.uk/#webpage",
-        "url": "https://barony.markhopking.co.uk/",
-        "name": "Barony of Balvill",
-        "description": "An evidence-led account of the Barony of Balvill, created by Crown charter in 1630 and held by Mark Hopking since 2025.",
-        "inLanguage": "en-GB",
-        "isPartOf": { "@id": "https://markhopking.co.uk/#website" },
-        "about": [
-          { "@id": "https://barony.markhopking.co.uk/#barony" },
-          { "@id": "https://markhopking.co.uk/#person" }
-        ],
-        "mainEntity": { "@id": "https://barony.markhopking.co.uk/#barony" }
-      },
-      {
-        "@type": "Thing",
-        "@id": "https://barony.markhopking.co.uk/#barony",
-        "name": "Barony of Balvill",
-        "alternateName": ["Balvill", "Baluill", "Barwill"],
-        "description": "A Scottish baronial dignity created by Crown charter in 1630; historically a feudal barony and, since the abolition of feudal tenure (in force 2004), an incorporeal heritable dignity."
-      }
-    ]
-  }
-  </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://barony.markhopking.co.uk/#website",
+      "url": "https://barony.markhopking.co.uk/",
+      "name": "Barony of Balvill",
+      "inLanguage": "en-GB",
+      "publisher": { "@id": "https://markhopking.co.uk/#person" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://barony.markhopking.co.uk/#webpage",
+      "url": "https://barony.markhopking.co.uk/",
+      "name": "Barony of Balvill",
+      "description": "An evidence-led account of the Barony of Balvill, created by Crown charter in 1630 and held by Mark Hopking since 2025.",
+      "inLanguage": "en-GB",
+      "isPartOf": { "@id": "https://barony.markhopking.co.uk/#website" },
+      "about": [
+        { "@id": "https://barony.markhopking.co.uk/#barony" },
+        { "@id": "https://markhopking.co.uk/#person" }
+      ],
+      "mainEntity": { "@id": "https://barony.markhopking.co.uk/#barony" }
+    },
+    {
+      "@type": "Thing",
+      "@id": "https://barony.markhopking.co.uk/#barony",
+      "name": "Barony of Balvill",
+      "alternateName": ["Balvill", "Baluill", "Barwill"],
+      "description": "A Scottish baronial dignity created by Crown charter in 1630; historically a feudal barony and, since the abolition of feudal tenure (in force 2004), an incorporeal heritable dignity.",
+      "mentions": [
+        { "@id": "https://markhopking.co.uk/#person" }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 
 <body id="top">
