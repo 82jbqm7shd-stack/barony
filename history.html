@@ -99,13 +99,24 @@
     .refs ol { margin: 0.75rem 0 0 1.25rem; }
     .refs li { margin: 0.45rem 0; overflow-wrap: anywhere; }
 
-    footer {
-      font-size: 0.9rem;
-      color: #555;
-      border-top: 1px solid #ddd;
-      margin-top: 2rem;
-      padding-top: 1rem;
-    }
+/* Standard site footer */
+.site-footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #ddd;
+  font-size: 0.85rem;
+  color: #555;
+  text-align: center;
+}
+
+.site-footer a {
+  color: #1a4b8c;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
   </style>
 
   <!-- JSON-LD structured data (kept light to avoid confusing the Person identity on the home page) -->
@@ -570,14 +581,20 @@
     </section>
   </main>
 
-  <footer>
-    <p>
-      Navigation: <a href="https://barony.markhopking.co.uk/">Barony summary</a> ·
-      <a href="https://markhopking.co.uk/">Mark Hopking (home)</a>
-    </p>
-    <p class="meta">
-      Last updated: <time datetime="2025-12-25">25 December 2025</time>.
-    </p>
-  </footer>
+ <footer class="site-footer">
+  <p>
+    © <span id="copyright-year"></span>
+    <a href="https://markhopking.co.uk/">markhopking.co.uk</a>.
+    All rights reserved.
+  </p>
+  <p>
+    Content is presented in a neutral, third-party style with citations distinguishing
+    published sources from privately held records.
+  </p>
+</footer>
+
+<script>
+  document.getElementById("copyright-year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
