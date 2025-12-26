@@ -82,12 +82,24 @@
     #references li { margin: 0.55rem 0; }
     .backtotop { font-size: 0.9rem; margin-left: 0.25rem; }
 
-    footer {
-      font-size: 0.9rem;
-      color: #555;
-      border-top: 1px solid #ddd;
-      margin-top: 2rem;
-    }
+/* Standard site footer */
+.site-footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #ddd;
+  font-size: 0.85rem;
+  color: #555;
+  text-align: center;
+}
+
+.site-footer a {
+  color: #1a4b8c;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
   </style>
 
   <!-- JSON-LD structured data -->
@@ -319,11 +331,21 @@
 
   </main>
 
-  <footer>
-    <p>
-      © Mark Hopking. This page forms part of a structured site network presenting different aspects of a single canonical person entity.
-    </p>
-  </footer>
+<footer class="site-footer">
+  <p>
+    © <span id="copyright-year"></span>
+    <a href="https://markhopking.co.uk/">markhopking.co.uk</a>.
+    All rights reserved.
+  </p>
+  <p>
+    Content is presented in a neutral, third-party style with citations distinguishing
+    published sources from privately held records.
+  </p>
+</footer>
+
+<script>
+  document.getElementById("copyright-year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
