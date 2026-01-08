@@ -1,167 +1,336 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>History of the Barony of Balvill</title>
-  <meta name="description" content="A documentary-led historical account of the Barony of Balvill from its seventeenth-century creation to its modern legal status as an incorporeal heritable dignity in Scotland." />
-
-  <!-- Canonical -->
+  <meta name="description" content="Comprehensive history of the Barony of Balvill from its creation in 1630 through nearly four centuries of the Campbell dynasty to modern times." />
   <link rel="canonical" href="https://barony.markhopking.co.uk/history.html" />
-
+  
   <style>
-    :root { --maxw: 980px; }
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.65;
+    :root {
+      --text-primary: #1a1a1a;
+      --text-secondary: #4a4a4a;
+      --bg-primary: #ffffff;
+      --bg-secondary: #f8f9fa;
+      --border-color: #d1d5db;
+      --link-color: #2563eb;
+      --link-hover: #1e40af;
+      --accent-color: #7c3aed;
+    }
+    
+    * {
       margin: 0;
       padding: 0;
-      color: #111;
-      background: #fafafa;
+      box-sizing: border-box;
     }
-    header, main, footer {
-      max-width: var(--maxw);
+    
+    body {
+      font-family: "Charter", "Georgia", "Times New Roman", serif;
+      line-height: 1.7;
+      color: var(--text-primary);
+      background-color: var(--bg-primary);
+      font-size: 18px;
+    }
+    
+    .container {
+      max-width: 850px;
       margin: 0 auto;
-      padding: 1.5rem;
+      padding: 2rem 1.5rem;
     }
-    header { padding-top: 2rem; }
-    h1, h2, h3, h4 { line-height: 1.25; font-weight: 650; }
-    h1 { font-size: 2rem; margin: 0 0 0.5rem 0; }
-    h2 { font-size: 1.45rem; margin: 2rem 0 0.75rem 0; }
-    h3 { font-size: 1.15rem; margin: 1.5rem 0 0.5rem 0; }
-    h4 { font-size: 1rem; margin: 1.25rem 0 0.25rem 0; }
-    p { margin: 0.75rem 0; }
-    a { color: #1a4b8c; text-decoration: none; }
-    a:hover, a:focus { text-decoration: underline; }
-
-    nav.site-nav {
+    
+    nav {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 1rem;
+      margin-bottom: 2.5rem;
       font-size: 0.95rem;
-      margin: 0.75rem 0 1.25rem 0;
-      padding: 0.75rem 0;
-      border-top: 1px solid #ddd;
-      border-bottom: 1px solid #ddd;
     }
-    nav.site-nav a { margin-right: 0.8rem; white-space: nowrap; }
-
-    .lead { font-size: 1.05rem; margin-top: 0.25rem; }
-    .meta { font-size: 0.95rem; color: #444; }
-
-    .methodology-note {
-      font-size: 0.95rem;
-      color: #333;
-      background: #fff;
-      border: 1px solid #e0e0e0;
-      padding: 0.9rem 1rem;
-      border-radius: 10px;
-      margin-top: 1rem;
+    
+    nav a {
+      color: var(--link-color);
+      text-decoration: none;
+      margin-right: 1rem;
     }
-
-    .note {
-      background: #fff;
-      border: 1px solid #e0e0e0;
-      border-left: 5px solid #1a4b8c;
-      padding: 0.9rem 1rem;
-      border-radius: 10px;
-      margin: 1rem 0 1rem 0;
+    
+    nav a:hover {
+      text-decoration: underline;
+    }
+    
+    h1 {
+      font-family: "Palatino", "Georgia", serif;
+      font-size: 2.75rem;
+      font-weight: 600;
+      line-height: 1.15;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+    
+    h2 {
+      font-family: "Palatino", "Georgia", serif;
+      font-size: 2rem;
+      font-weight: 600;
+      line-height: 1.25;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      letter-spacing: -0.015em;
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 0.5rem;
+    }
+    
+    h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-top: 2.25rem;
+      margin-bottom: 0.75rem;
+      color: var(--accent-color);
+    }
+    
+    h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
       font-style: italic;
-      color: #222;
     }
-
-    /* Citations */
+    
+    p {
+      margin-bottom: 1.25rem;
+    }
+    
+    .lead {
+      font-size: 1.2rem;
+      line-height: 1.75;
+      color: var(--text-secondary);
+      margin-bottom: 2.5rem;
+      font-style: italic;
+    }
+    
+    .toc {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      padding: 1.5rem;
+      margin: 2rem 0 3rem;
+    }
+    
+    .toc h2 {
+      margin-top: 0;
+      font-size: 1.3rem;
+      border: none;
+      padding: 0;
+      margin-bottom: 1rem;
+    }
+    
+    .toc ol {
+      padding-left: 1.5rem;
+      margin: 0;
+    }
+    
+    .toc li {
+      margin-bottom: 0.5rem;
+      line-height: 1.5;
+    }
+    
+    .toc a {
+      color: var(--link-color);
+      text-decoration: none;
+    }
+    
+    .toc a:hover {
+      text-decoration: underline;
+    }
+    
+    .note {
+      background: #fef3c7;
+      border-left: 4px solid #f59e0b;
+      padding: 1rem 1.25rem;
+      margin: 2rem 0;
+      font-size: 0.95rem;
+    }
+    
+    .note strong {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #92400e;
+    }
+    
+    .highlight-box {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+    
+    .highlight-box h4 {
+      margin-top: 0;
+      color: var(--accent-color);
+    }
+    
+    blockquote {
+      border-left: 4px solid var(--accent-color);
+      padding-left: 1.5rem;
+      margin: 1.5rem 0;
+      font-style: italic;
+      color: var(--text-secondary);
+    }
+    
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+    }
+    
+    a:hover {
+      color: var(--link-hover);
+      text-decoration: underline;
+    }
+    
+    sup {
+      font-size: 0.75em;
+      line-height: 0;
+    }
+    
     sup a {
       text-decoration: none;
-      color: #1a4b8c;
     }
-    sup a:hover, sup a:focus {
-      text-decoration: underline;
-      color: #000;
+    
+    .references {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      padding: 1.5rem;
+      margin-top: 4rem;
+      font-size: 0.9rem;
     }
-
-    .toc {
-      background: #fff;
-      border: 1px solid #e0e0e0;
-      border-radius: 10px;
-      padding: 1rem 1rem;
-      margin: 1.25rem 0 1.5rem 0;
+    
+    .references h2 {
+      margin-top: 0;
+      font-size: 1.5rem;
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
     }
-    .toc h2 { margin: 0 0 0.5rem 0; font-size: 1.15rem; }
-    .toc ol { margin: 0.5rem 0 0 1.25rem; padding: 0; }
-    .toc li { margin: 0.25rem 0; }
-
-    .refs {
-      background: #fff;
-      border: 1px solid #e0e0e0;
-      border-radius: 10px;
-      padding: 1rem 1rem;
-      margin-top: 2rem;
+    
+    .references ol {
+      padding-left: 1.5rem;
+      margin: 0;
     }
-    .refs h2 { margin-top: 0; }
-    .refs ol { margin: 0.75rem 0 0 1.25rem; }
-    .refs li { margin: 0.45rem 0; overflow-wrap: anywhere; }
-
-/* Standard site footer */
-.site-footer {
-  margin-top: 3rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid #ddd;
-  font-size: 0.85rem;
-  color: #555;
-  text-align: center;
-}
-
-.site-footer a {
-  color: #1a4b8c;
-  text-decoration: none;
-}
-
-.site-footer a:hover {
-  text-decoration: underline;
-}
+    
+    .references li {
+      margin-bottom: 1.25rem;
+      line-height: 1.6;
+    }
+    
+    footer {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-color);
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      text-align: center;
+    }
+    
+    .back-to-top {
+      display: inline-block;
+      margin-left: 0.5rem;
+      font-size: 0.85em;
+      color: var(--link-color);
+    }
+    
+    @media (max-width: 640px) {
+      body {
+        font-size: 16px;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      h2 {
+        font-size: 1.6rem;
+      }
+      
+      h3 {
+        font-size: 1.25rem;
+      }
+    }
   </style>
-
-  <!-- JSON-LD structured data (kept light to avoid confusing the Person identity on the home page) -->
+  
+  <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "WebSite",
-        "@id": "https://barony.markhopking.co.uk/#website",
-        "url": "https://barony.markhopking.co.uk/",
-        "name": "Barony of Balvill",
-        "inLanguage": "en-GB",
-        "publisher": {
-          "@type": "Person",
-          "@id": "https://markhopking.co.uk/#person"
-        }
-      },
-      {
         "@type": "WebPage",
         "@id": "https://barony.markhopking.co.uk/history.html#webpage",
         "url": "https://barony.markhopking.co.uk/history.html",
         "name": "History of the Barony of Balvill",
+        "description": "Comprehensive history of the Barony of Balvill from its creation in 1630 through nearly four centuries of the Campbell dynasty to modern times.",
         "inLanguage": "en-GB",
-        "isPartOf": { "@id": "https://barony.markhopking.co.uk/#website" },
-        "about": { "@id": "https://barony.markhopking.co.uk/#barony" },
-        "primaryImageOfPage": null,
-        "mainEntity": { "@id": "https://barony.markhopking.co.uk/history.html#article" }
-      },
-      {
-        "@type": "Thing",
-        "@id": "https://barony.markhopking.co.uk/#barony",
-        "name": "Barony of Balvill",
-        "alternateName": ["Balwill","Balweill","Baluill","Barwill"],
-        "description": "A Scottish barony created by Crown charter in 1630 and later existing as an incorporeal heritable dignity under Scots law."
+        "isPartOf": {
+          "@id": "https://barony.markhopking.co.uk/#website"
+        },
+        "about": {
+          "@id": "https://barony.markhopking.co.uk/#barony"
+        },
+        "mainEntity": {
+          "@id": "https://barony.markhopking.co.uk/#barony"
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://markhopking.co.uk/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Barony of Balvill",
+              "item": "https://barony.markhopking.co.uk/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "History",
+              "item": "https://barony.markhopking.co.uk/history.html"
+            }
+          ]
+        }
       },
       {
         "@type": "Article",
-        "@id": "https://barony.markhopking.co.uk/history.html#article",
         "headline": "History of the Barony of Balvill",
-        "inLanguage": "en-GB",
-        "about": { "@id": "https://barony.markhopking.co.uk/#barony" },
-        "mentions": [{ "@id": "https://markhopking.co.uk/#person" }],
-        "isPartOf": { "@id": "https://barony.markhopking.co.uk/history.html#webpage" },
-        "publisher": { "@id": "https://markhopking.co.uk/#person" }
+        "description": "From Crown charter in 1630 through nearly four centuries of the Campbell dynasty, the abolition of feudal tenure, and into the modern era",
+        "author": {
+          "@type": "Person",
+          "name": "Mark Hopking"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Mark Hopking"
+        },
+        "datePublished": "2025",
+        "about": [
+          {
+            "@id": "https://barony.markhopking.co.uk/#barony"
+          },
+          {
+            "@type": "Thing",
+            "name": "Scottish Feudal Baronies"
+          },
+          {
+            "@type": "Thing",
+            "name": "Campbell Dynasty"
+          },
+          {
+            "@type": "Thing",
+            "name": "Duke of Argyll"
+          }
+        ]
       }
     ]
   }
@@ -169,377 +338,813 @@
 </head>
 
 <body>
-  <header>
-    <h1>History of the Barony of Balvill</h1>
-    <p class="lead">
-      A documentary-led historical account of the Barony of Balvill from its seventeenth-century creation to its modern status as an incorporeal heritable dignity.
-    </p>
-
-    <nav class="site-nav" aria-label="Site navigation">
-      <a href="https://markhopking.co.uk/">Home</a>
-      <a href="https://barony.markhopking.co.uk/">Barony summary</a>
+  <div class="container">
+    <nav>
+      <a href="/">← Barony of Balvill (Overview)</a>
+      <a href="https://markhopking.co.uk/">Mark Hopking</a>
       <a href="https://heraldry.markhopking.co.uk/">Heraldry</a>
-      <a href="https://marine.markhopking.co.uk/">Maritime career</a>
-      <a href="https://genealogy.markhopking.co.uk/">Genealogy</a>
     </nav>
 
-    <p class="meta">
-      This page distinguishes between information supported by published sources and material held in private archival records. Where evidence is unpublished or privately held, it is treated conservatively and not presented as independently verifiable.
-    </p>
+    <header>
+      <h1>History of the Barony of Balvill</h1>
+      <p class="lead">
+        From Crown charter in 1630 through nearly four centuries of the Campbell dynasty, 
+        the abolition of feudal tenure, and into the modern era—the story of a Scottish 
+        baronial dignity across the centuries.
+      </p>
+    </header>
 
-    <div class="toc" role="navigation" aria-label="Table of contents">
+    <div class="toc" id="contents">
       <h2>Contents</h2>
       <ol>
-        <li><a href="#s1">Introduction: scope, sources, and method</a></li>
-        <li><a href="#s2">What is a Scottish barony?</a></li>
-        <li><a href="#s3">Pre-1630 context: Argyll lordship and feudal authority</a></li>
-        <li><a href="#s4">Creation and confirmation (1630–1633)</a></li>
-        <li><a href="#s4a">Geographical extent and caput of Balvill</a></li>
-        <li><a href="#s4b">Minor baronies within great noble estates</a></li>
-        <li><a href="#s4c">Language, naming, and legal identity</a></li>
-        <li><a href="#s5">Covenanting period and the rise of Argyll (1638–1651)</a></li>
-        <li><a href="#s6">Forfeiture, treason, and annexation (1661)</a></li>
-        <li><a href="#s7">Renewed crisis and second forfeiture (1685)</a></li>
-        <li><a href="#s8">Restoration and rescission (1689)</a></li>
-        <li><a href="#s9">Eighteenth-century continuity and administration</a></li>
-        <li><a href="#s10">Nineteenth-century resignations and re-chartering</a></li>
-        <li><a href="#s11">Transition toward the modern period</a></li>
-        <li><a href="#s12">Abolition of feudal tenure and the modern barony (post-2000)</a></li>
-        <li><a href="#s13">Continuity into the twenty-first century and assignation (2025)</a></li>
-        <li><a href="#s14">Conclusion</a></li>
-        <li><a href="#references">References and sources</a></li>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#understanding-baronies">Understanding Scottish Feudal Baronies</a>
+          <ol style="padding-left: 1.25rem; margin-top: 0.25rem;">
+            <li><a href="#origins">Origins in the Feudal System</a></li>
+            <li><a href="#feudal-hierarchy">The Feudal Hierarchy: Superiority vs. Possession</a></li>
+            <li><a href="#baronial-powers">What Baronies Conferred</a></li>
+          </ol>
+        </li>
+        <li><a href="#creation">Creation of the Barony of Balvill (1630–1633)</a>
+          <ol style="padding-left: 1.25rem; margin-top: 0.25rem;">
+            <li><a href="#historical-context">Historical Context</a></li>
+            <li><a href="#charter-1630">The 1630 Crown Charter</a></li>
+            <li><a href="#geography">The Composite Geography</a></li>
+            <li><a href="#confirmation-1633">Parliamentary Confirmation (1633)</a></li>
+          </ol>
+        </li>
+        <li><a href="#campbell-era">The Campbell Dynasty (1630–2025)</a>
+          <ol style="padding-left: 1.25rem; margin-top: 0.25rem;">
+            <li><a href="#civil-war-era">Power and Peril: The Civil War Era</a></li>
+            <li><a href="#consolidation">Consolidation and Stability</a></li>
+            <li><a href="#later-dukes">The Later Dukes</a></li>
+          </ol>
+        </li>
+        <li><a href="#erosion-power">The Erosion of Feudal Power (1747)</a></li>
+        <li><a href="#modern-transformation">The Modern Transformation (2000–2004)</a></li>
+        <li><a href="#transfer-2025">The 2025 Transfer</a></li>
+        <li><a href="#references">References</a></li>
       </ol>
     </div>
-  </header>
 
-  <main>
-    <section id="s1" aria-labelledby="h-s1">
-      <h2 id="h-s1">1. Introduction: Scope, Sources, and Method</h2>
-      <p>
-        This article presents a documentary-based historical account of the Barony of Balvill from its creation in the early seventeenth century to the present day.
-        It examines the legal constitution, continuity, and transformation of the barony as a Scottish dignity, situating it within the wider political and territorial
-        history of the Campbells of Argyll.
-      </p>
-      <p>
-        The narrative is grounded primarily in Crown charters, Acts of the Parliament of Scotland, ratifications, forfeiture and restoration instruments, and later resignations
-        and re-charterings. These primary sources are supplemented by selected secondary works and modern scholarly commentary where they assist interpretation, including a
-        specialist historical account by Dr Bruce Durie.<sup><a href="#ref-1">[1]</a></sup>
-      </p>
-      <p>
-        Throughout, the Barony of Balvill is treated as a continuing legal entity unless the sources explicitly demonstrate interruption or extinction. Periods in which the barony
-        is not specifically named in surviving records are not taken to imply lapse or disappearance, particularly given its status as a minor dignity held within a much larger noble estate.
-      </p>
-    </section>
+    <main>
+      <section id="introduction">
+        <h2>Introduction</h2>
+        
+        <p>
+          The Barony of Balvill stands as a testament to nearly four centuries of Scottish legal 
+          and social history. Created in 1630 during the reign of Charles I, confirmed by Act of 
+          Parliament in 1633, and held continuously by the Campbell family and the Dukes of Argyll 
+          until 2025, this feudal barony has survived the turbulent convulsions of civil war, 
+          Jacobite risings, the abolition of heritable jurisdictions, and the final dissolution 
+          of feudal land tenure itself.
+        </p>
+        
+        <p>
+          This history traces the barony from its creation as a composite feudal holding—spanning 
+          territories from Stirlingshire to the Inner Hebrides—through the dramatic fortunes of 
+          the Campbell dynasty, the gradual erosion of baronial powers, and its ultimate 
+          transformation into an incorporeal heritable dignity under modern Scots law.
+        </p>
+      </section>
 
-    <section id="s2" aria-labelledby="h-s2">
-      <h2 id="h-s2">2. What Is a Scottish Barony?</h2>
+      <section id="understanding-baronies">
+        <h2>Understanding Scottish Feudal Baronies</h2>
+        
+        <h3 id="origins">Origins in the Feudal System</h3>
+        
+        <p>
+          Scottish feudal baronies trace their origins to the 12th century, when King David I 
+          (r. 1124–1153) systematically introduced Norman feudal institutions to Scotland.<sup><a href="#ref1">[1]</a></sup> 
+          Having spent much of his youth at the court of his brother-in-law, Henry I of England, 
+          David recognised the administrative and military advantages of feudalism and imported 
+          the system wholesale upon his accession to the Scottish throne.
+        </p>
+        
+        <p>
+          David granted baronies to Anglo-Norman and Flemish knights and aristocrats in exchange 
+          for <em>ward</em>—the obligation to provide the Crown with armed men and mounted knights 
+          when required. These grants were recorded in charters that erected lands <em>in liberam 
+          baroniam</em> (in free barony), directly from the Crown.<sup><a href="#ref1">[1]</a></sup> 
+          By the time of Robert I in the early 14th century, there were perhaps 200 to 300 baronies; 
+          by 1405 this had risen to 400, and by 1707, as James VI & I and his Stuart successors 
+          consolidated their joint kingdoms, the total approached 1,500.<sup><a href="#ref1">[1]</a></sup>
+        </p>
+        
+        <h3 id="feudal-hierarchy">The Feudal Hierarchy: Superiority vs. Possession</h3>
+        
+        <p>
+          One of the most commonly misunderstood aspects of Scottish feudal baronies concerns the 
+          relationship between the barony itself and actual ownership of the land. This confusion 
+          arises from the dual nature of feudal landholding under Scots law, which recognised two 
+          distinct forms of right over the same land:
+        </p>
+        
+        <div class="highlight-box">
+          <h4>Dominium Directum (Feudal Superiority)</h4>
+          <p>
+            This was the superior's right—in the case of a barony, held by the baron. The feudal 
+            superior held the ultimate title to the land but did not necessarily occupy or directly 
+            control it. The superior received feudal duties (feu-duties) from those who actually 
+            held the land below them in the feudal chain.
+          </p>
+          
+          <h4 style="margin-top: 1rem;">Dominium Utile (Beneficial Possession)</h4>
+          <p>
+            This was the right of the actual possessor or occupier of the land—the person who 
+            worked it, lived on it, and exercised practical control over it. This vassal held the 
+            land heritably and could sell or bequeath it, subject to the superior's rights.
+          </p>
+        </div>
+        
+        <p>
+          These two rights could be—and frequently were—held by entirely different people. A baron 
+          might be the feudal superior of extensive lands without owning or occupying any of them 
+          directly. The institutional writer Lord Bankton explained that "the dignity of a barony" 
+          existed as a noble quality of the feudal grant, independent of whether the baron actually 
+          resided on or personally controlled the lands.<sup><a href="#ref2">[2]</a></sup>
+        </p>
+        
+        <p>
+          This separation became particularly pronounced through <em>subinfeudation</em>—the practice 
+          whereby a baron could grant portions of baronial lands to vassals, who held them heritably 
+          and paid feu-duties to the baron, who in turn paid feudal obligations to the Crown. These 
+          vassals could themselves sub-infeudate with the superior's consent, creating a complex 
+          hierarchy of feudal relationships.
+        </p>
+        
+        <p>
+          In extreme cases, a baron might subinfeudate all the lands of a barony, retaining only 
+          a small plot—sometimes no more than a particular stone in a corner of a field—as the 
+          <em>caput baroniae</em> (the head of the barony). These came to be called "telegraph-pole 
+          baronies" because the baron's only remaining interest might be charging wayleave fees to 
+          telegraph and telephone companies for erecting poles on the caput.<sup><a href="#ref1">[1]</a></sup>
+        </p>
+        
+        <div class="note">
+          <strong>Example: The Barony of Balvill</strong>
+          By the 18th and 19th centuries, the Dukes of Argyll remained Barons of Balvill—holding 
+          the feudal superiority—while the actual lands of Balvill in Stirlingshire were possessed 
+          by the Stirling family, and later by James Macfarlane and his descendants. The Argylls 
+          received feu-duties from these possessors but did not occupy the lands themselves, 
+          residing instead at Inveraray Castle in Argyllshire.
+        </div>
+        
+        <h3 id="baronial-powers">What Baronies Conferred</h3>
+        
+        <p>
+          Early grants of baronies typically contained the formula "<em>soke and sake, toll and 
+          theame, infangthief and outfangthief</em>." These Anglo-Norman and Anglo-Saxon terms, 
+          imported by David I, granted substantial jurisdictional powers:<sup><a href="#ref1">[1]</a></sup>
+        </p>
+        
+        <ul style="margin-left: 2rem; margin-bottom: 1.25rem;">
+          <li style="margin-bottom: 0.5rem;"><strong>Soke and sake</strong>: The right to hold courts and administer justice, substituting local baronial jurisdiction for the King's national courts.</li>
+          <li style="margin-bottom: 0.5rem;"><strong>Toll and theame</strong>: The right to levy tolls on passage and sale of goods, and to hold courts concerning theft and retain the profits.</li>
+          <li style="margin-bottom: 0.5rem;"><strong>Infangthief and outfangthief</strong>: The right to try and punish (including execution) thieves caught within the barony's jurisdiction.</li>
+        </ul>
+        
+        <p>
+          These jurisdictional privileges were symbolised by <em>fossa et forca</em> (pit and gallows)—the 
+          baron's right to capital punishment. Barons could also hold fairs and markets, create burghs 
+          of barony to control trade, and exact various feudal payments and services.<sup><a href="#ref1">[1]</a></sup>
+        </p>
+        
+        <p>
+          However, it is crucial to understand that Scottish feudal barons were <em>not</em> peers. 
+          The lowest rank of the Scottish peerage was Lord of Parliament, entirely distinct from 
+          feudal barons. While originally all barons could attend Parliament as part of the Estate 
+          of the Barons, by 1428 there were so many that they began electing commissioners to 
+          represent them.<sup><a href="#ref3">[3]</a></sup> An Act of 1587 confirmed this arrangement 
+          and made clear that barons were no longer part of the nobility.<sup><a href="#ref4">[4]</a></sup> 
+          At the Union of Parliaments in 1707, feudal barons had no place in Westminster.
+        </p>
+      </section>
 
-      <h3>2.1 The barony as a feudal jurisdiction and dignity</h3>
-      <p>
-        In early modern Scotland, a barony was a legally constituted dignity erected by the Crown, typically by charter under the Great Seal. It conferred a recognised status upon its holder
-        and was associated with certain jurisdictional and superior rights within the feudal system. A barony was transmissible, capable of confirmation by Parliament, and liable to forfeiture or restoration
-        along with the other honours of its holder.<sup><a href="#ref-18">[18]</a></sup>
-      </p>
+      <section id="creation">
+        <h2>Creation of the Barony of Balvill (1630–1633)</h2>
+        
+        <h3 id="historical-context">Historical Context</h3>
+        
+        <p>
+          The creation of the Barony of Balvill in 1630 must be understood against the backdrop of 
+          Charles I's troubled reign and the political ascendancy of the Campbell family in western 
+          Scotland. Archibald Campbell, Lord Lorne—the grantee—was the son of the 7th Earl of Argyll, 
+          a Catholic convert who had been forced into exile and declared a traitor in 1619.<sup><a href="#ref5">[5]</a></sup>
+        </p>
+        
+        <p>
+          By 1630, Lord Lorne had secured royal favour and was consolidating Campbell power through 
+          strategic acquisitions and royal grants. The creation of Balvill formed part of a broader 
+          pattern: between 1625 and 1632, Charles I granted Lorne several composite baronies—Ardnamurchan 
+          (1625), Balvill (1630), and Gigha (1632)—each uniting dispersed Campbell holdings under a 
+          single baronial dignity.<sup><a href="#ref6">[6]</a></sup>
+        </p>
+        
+        <h3 id="charter-1630">The 1630 Crown Charter</h3>
+        
+        <p>
+          On 5 August 1630, at the Palace of Holyroodhouse in Edinburgh, King Charles I granted a 
+          Crown charter under the Great Seal of Scotland creating the Barony of Balvill.<sup><a href="#ref7">[7]</a></sup> 
+          The charter, recorded in the Register of the Great Seal as number 1623, granted the barony 
+          to:
+        </p>
+        
+        <blockquote>
+          Archibald Lord Lorne &c., and his heirs male and assignees whatsoever
+        </blockquote>
+        
+        <p>
+          The charter united various lands and jurisdictions previously held separately, incorporating 
+          them into a single barony. Crucially, the charter designated "<em>the manor place of Baluill 
+          to be the principal messuage</em>"—that is, the <em>caput baroniae</em> or head of the 
+          barony.<sup><a href="#ref7">[7]</a></sup> This was the legal anchor point of the barony, the 
+          place from which the feudal dignity derived its name and nominal seat.
+        </p>
+        
+        <h3 id="geography">The Composite Geography</h3>
+        
+        <p>
+          What made the Barony of Balvill unusual was its composite and geographically dispersed 
+          nature. The charter incorporated lands in several distinct regions:
+        </p>
+        
+        <h4>The Caput: Stirlingshire</h4>
+        
+        <p>
+          The principal messuage and caput lay at Balvill (or Baluill, sometimes Balwill) in the 
+          Parish of Drymen, Stirlingshire. The name derives from the Scottish Gaelic <em>baile</em>, 
+          meaning "home," "farmstead," or "town."<sup><a href="#ref5">[5]</a></sup> The 1630 charter 
+          specifically describes:
+        </p>
+        
+        <blockquote>
+          The lands of Baluill extending to 5 merks of old extent with a manor place, lands of 
+          Woodend with forest, Ballairds Over and Nether with the millstream of Ballairds, with 
+          tenantries &c., by annexation in the barony of Gleneagles, parish of Drymen
+          <sup><a href="#ref7">[7]</a></sup>
+        </blockquote>
+        
+        <p>
+          These lands had previously been part of the Barony of Gleneagles, held by the Haldane 
+          family, and were resigned by John Haldane of Gleneagles (with the consent of his wife, 
+          Catherine Wemyss) to allow their incorporation into the new barony.<sup><a href="#ref7">[7]</a></sup>
+        </p>
+        
+        <p>
+          The charter also incorporated neighbouring lands: "lands of Calyemoir called Ross, 
+          Lurglorne, with tenantries &c., in the barony of Haldan, lands of Kepdowrie with 
+          tenantries &c., in the barony of Gleneagles; 5 merks of the lands of Auchreg Over 
+          and Nether, in the barony of Haldan."<sup><a href="#ref7">[7]</a></sup> All of these 
+          lay in or near Drymen, in what was then recorded as the "shire of Perth" but was 
+          actually Stirlingshire—the boundary between the two counties lay nearby and was often 
+          confused in period documents.
+        </p>
+        
+        <h4>The Islands: Jura, Oronsay, and Colonsay</h4>
+        
+        <p>
+          Far to the west, in the Inner Hebrides, the barony incorporated substantial island 
+          holdings. The charter granted:
+        </p>
+        
+        <blockquote>
+          The island of Oronsay extending to 5 merks of lands, 16 shillings 8 pennies of lands 
+          of Garvart in Colonsay, 8 shillings of Stronane in Jura, with mills and fishings, 
+          formerly pertaining to the priory of Oronsay... also the third part of 18 merks of 
+          lands of Queyneis [various named subdivisions], in the island of Mull, the island of 
+          Rum extending to 6 merks of old extent... 16 shillings 8 pennies of lands of Ardvanische, 
+          [and other named lands] in the island of Jura
+          <sup><a href="#ref7">[7]</a></sup>
+        </blockquote>
+        
+        <p>
+          These island lands had come from various sources: some from the dissolved Priory of 
+          Oronsay following the Reformation; others from William Stirling of Auchyle; others from 
+          Lauchlane MacLaine of Coll and his son; and still others from Lauchlane MacLaine of 
+          Morvern and Archibald Campbell of Kilmun.<sup><a href="#ref7">[7]</a></sup>
+        </p>
+        
+        <p>
+          The geographic separation between the caput in Stirlingshire and the island holdings 
+          over 100 miles to the west was not unusual for major Scottish noble families. The 
+          Campbells, as chiefs of Clan Campbell and (from 1457) Earls of Argyll, held extensive 
+          territories throughout western Scotland. Designating Balvill—more accessible from 
+          Edinburgh and the centres of royal power—as the caput of a barony that included remote 
+          island holdings reflected both practical governance considerations and the symbolic 
+          importance of having a mainland seat.
+        </p>
+        
+        <div class="note">
+          <strong>The Feudal Payments</strong>
+          The charter specified different forms of <em>reddendo</em> (feudal payment) for different 
+          parts of the barony: £3 for Oronsay, various amounts for other portions in feu-ferme 
+          (cash payment), with doubling of the feu-ferme at the entry of heirs, and payment of 
+          stipends to ministers of churches where the lands lay.<sup><a href="#ref7">[7]</a></sup>
+        </div>
+        
+        <h3 id="confirmation-1633">Parliamentary Confirmation (1633)</h3>
+        
+        <p>
+          On 28 June 1633, the Scottish Parliament passed an Act in favour of Archibald Campbell, 
+          Lord Lorne, ratifying and confirming the 1630 charter.<sup><a href="#ref6">[6]</a></sup> 
+          The Act stated:
+        </p>
+        
+        <blockquote>
+          Our sovereign lord, with advice and consent of the three estates of this present 
+          parliament, ratifies and approves the three charters after-mentioned... the second 
+          of the said charters made and granted by his majesty under the great seal to the 
+          said Archibald, lord Lorne and his foresaids of the lands and others mentioned 
+          therein thereby united in a barony called the barony of Balavil [<em>sic</em>], 
+          of the date at Holyroodhouse, 5 August 1630
+          <sup><a href="#ref6">[6]</a></sup>
+        </blockquote>
+        
+        <p>
+          This parliamentary ratification—coming three years after the original charter—provided 
+          an additional layer of legal security. While the Crown charter alone was sufficient to 
+          create a barony, parliamentary confirmation made it exceptionally difficult for future 
+          monarchs or governments to challenge the grant's validity.
+        </p>
+        
+        <p>
+          By 1633, Archibald Campbell had styled himself Lord Lorne for over a decade but would 
+          not inherit his father's earldom until 1638, when the 7th Earl died. In 1641, Charles I 
+          elevated him further, creating him 1st Marquess of Argyll—a dignity he would hold until 
+          his execution in 1661.
+        </p>
+      </section>
 
-      <h3>2.2 Barony and land ownership</h3>
-      <p>
-        Although baronies were often associated with land, land ownership was not definitive of baronial status. A barony could include land, superiority over land, or jurisdiction relating to land, but its
-        legal existence did not depend upon continuous ownership of any particular estate. This distinction is essential to interpreting documentary references to lands and islands in baronial instruments, which
-        typically reflect superiorities or jurisdictional reach rather than exclusive modern proprietorship.
-      </p>
+      <section id="campbell-era">
+        <h2>The Campbell Dynasty (1630–2025)</h2>
+        
+        <p>
+          For 395 years, the Barony of Balvill remained continuously associated with the Campbell 
+          family and, from 1701, the Dukes of Argyll. This extraordinary continuity spanned periods 
+          of dramatic political upheaval, civil war, Jacobite risings, the Union of Parliaments, 
+          the abolition of heritable jurisdictions, and ultimately the end of feudal tenure itself.
+        </p>
+        
+        <h3 id="civil-war-era">Power and Peril: The Civil War Era</h3>
+        
+        <h4>Archibald Campbell, 8th Earl and 1st Marquess of Argyll (c. 1607–1661)</h4>
+        
+        <p>
+          The original grantee of Balvill, Archibald Campbell, succeeded his father as 8th Earl 
+          of Argyll in 1638. By this time, he had already assumed effective control of the vast 
+          Argyll estates and emerged as the most powerful nobleman in Scotland—not merely through 
+          land and title, but as chief of Clan Campbell, commanding personal loyalty from some 
+          20,000 armed clansmen.<sup><a href="#ref8">[8]</a></sup>
+        </p>
+        
+        <p>
+          Unlike his father, who had converted to Catholicism and died in exile, the 8th Earl 
+          became a fervent Presbyterian and the principal leader of the Covenanters—the movement 
+          that opposed Charles I's attempt to impose Anglican religious practices on Scotland. 
+          When civil war erupted across the three kingdoms in the 1640s, Argyll effectively 
+          governed Scotland.<sup><a href="#ref8">[8]</a></sup>
+        </p>
+        
+        <p>
+          In 1641, Charles I created Argyll Marquess, hoping to secure his loyalty. Instead, 
+          Argyll allied with the English Parliament against the King, though he later opposed 
+          Charles I's execution in 1649—an act no Scot had desired. Following the King's death, 
+          Argyll supported bringing Charles II to Scotland, personally placing the crown on the 
+          young king's head at his Scottish coronation at Scone on 1 January 1651.
+        </p>
+        
+        <p>
+          This proved a fatal misjudgment. At the Restoration of 1660, Charles II—who had never 
+          forgiven the humiliations imposed on him by the Covenanters during his time in 
+          Scotland—had Argyll arrested in London. Despite having supported the King's return, 
+          Argyll was convicted of treason and beheaded on the "Maiden" (an early form of 
+          guillotine) in Edinburgh on 27 May 1661.<sup><a href="#ref5">[5]</a></sup> His estates, 
+          including the Barony of Balvill, were forfeited to the Crown.
+        </p>
+        
+        <h4>Archibald Campbell, 9th Earl of Argyll (1629–1685)</h4>
+        
+        <p>
+          The 9th Earl presents one of the more complex figures in the barony's history. Unlike 
+          his father, he had been raised a Royalist, fostered with relatives and educated abroad 
+          to keep him away from Scotland's religious conflicts. He had even fought against the 
+          Covenanters at the Battle of Dunbar in 1650, where his regiment was nearly annihilated.
+        </p>
+        
+        <p>
+          In 1663, two years after his father's execution, Charles II restored the 9th Earl to 
+          the title and estates, including Balvill.<sup><a href="#ref5">[5]</a></sup> The young 
+          Earl received a new charter of all his lands and hereditary offices in 1667, and for 
+          two decades served the Crown, including leading expeditions to suppress Highland unrest.
+        </p>
+        
+        <p>
+          However, the accession of the Catholic James VII (James II of England) in 1685 proved 
+          disastrous. The 9th Earl was put on trial for treason on questionable charges, condemned, 
+          and his estates again forfeited. He escaped from Edinburgh Castle (reportedly disguised 
+          as a page by his stepdaughter) and fled to Holland, where he joined other exiles plotting 
+          against James.<sup><a href="#ref5">[5]</a></sup>
+        </p>
+        
+        <p>
+          In 1685, Argyll launched an ill-fated invasion of Scotland in coordination with the 
+          Duke of Monmouth's rebellion in England. Both failed utterly. Argyll was captured, 
+          returned to Edinburgh, and executed on 30 June 1685—on the same scaffold where his 
+          father had died 24 years earlier. According to witnesses, Argyll declared the Maiden 
+          "the sweetest maiden he had ever kissed."<sup><a href="#ref5">[5]</a></sup> His estates 
+          were forfeited for the second time in less than 25 years.
+        </p>
+        
+        <h4>Restoration and Vindication</h4>
+        
+        <p>
+          The Glorious Revolution of 1688, which overthrew James VII and brought William of Orange 
+          and Mary to the throne, vindicated both executed Earls posthumously. On 5 June 1689, 
+          the Scottish Parliament passed an Act rescinding the forfeiture of the 9th Earl, 
+          declaring that:
+        </p>
+        
+        <blockquote>
+          The causing pursue and forfeit several persons, upon stretches of old and obsolete 
+          laws, upon frivolous and weak pretences, upon lame and defective probation, and 
+          particularly the late earl of Argyll, to the scandal and reproach of the justice 
+          of the nation, are contrary to law
+          <sup><a href="#ref9">[9]</a></sup>
+        </blockquote>
+        
+        <p>
+          Archibald Campbell, 10th Earl of Argyll—eldest son of the 9th Earl—was restored to 
+          his father's and grandfather's honours and estates in 1690, including the Barony of 
+          Balvill.
+        </p>
+        
+        <h3 id="consolidation">Consolidation and Stability</h3>
+        
+        <h4>Archibald Campbell, 10th Earl and 1st Duke of Argyll (1658–1703)</h4>
+        
+        <p>
+          The 10th Earl had lived through his father's and grandfather's executions and the 
+          forfeitures that followed. Understandably, he devoted his career to securing stable 
+          relations with the Crown. Having supported William and Mary's accession, he became 
+          one of William's principal Scottish advisors.
+        </p>
+        
+        <p>
+          The 10th Earl commanded the Earl of Argyll's Regiment of Foot, which was involved in 
+          one of the most controversial episodes in Scottish history: the killing of members of 
+          the MacIan MacDonalds of Glencoe on 13 February 1692. While the Earl himself played 
+          no direct role—the responsibility lay with John Dalrymple, Master of Stair, and ultimately 
+          King William, who signed the orders—the involvement of Campbell soldiers in what came 
+          to be called the "Massacre of Glencoe" has remained a source of historical controversy 
+          and clan enmity.<sup><a href="#ref5">[5]</a></sup>
+        </p>
+        
+        <p>
+          In 1701, King William created the 10th Earl Duke of Argyll, finally securing the 
+          family's position at the highest rank of the Scottish nobility. From this point forward, 
+          the Barony of Balvill would be held by Dukes of Argyll. The 1st Duke died in 1703 and 
+          was buried at Kilmun Parish Church, beginning a tradition continued by most of his 
+          successors.
+        </p>
+        
+        <h4>John Campbell, 2nd Duke of Argyll (1680–1743)</h4>
+        
+        <p>
+          The 2nd Duke was principally a military man, having served with distinction in the 
+          War of the Spanish Succession and commanded British forces in Spain. In Scottish history, 
+          he is best remembered for commanding government forces against the Jacobites at the 
+          Battle of Sheriffmuir on 13 November 1715 during the first major Jacobite rising.<sup><a href="#ref5">[5]</a></sup>
+        </p>
+        
+        <p>
+          The battle was inconclusive—both sides claimed victory—but it effectively ended the 
+          '15 Rising's chances of success. The Jacobite commander, the Earl of Mar, subsequently 
+          fled to France, and the Old Pretender (James Francis Edward Stuart) soon followed.
+        </p>
+        
+        <p>
+          For his services, the 2nd Duke received English titles in addition to his Scottish 
+          honours, being created Duke of Greenwich in 1719. However, having no sons, these English 
+          titles died with him in 1743, while his Scottish titles—including the Barony of 
+          Balvill—passed to his younger brother.
+        </p>
+        
+        <h4>Archibald Campbell, 3rd Duke of Argyll (1682–1761)</h4>
+        
+        <p>
+          Styled Earl of Ilay until succeeding his brother in 1743, the 3rd Duke was the predominant 
+          Scottish political figure of his era. Appointed Keeper of the Great Seal of Scotland in 
+          1733, he managed Scotland's political affairs for the British government for decades, 
+          earning the nickname "King of Scotland" for his influence.<sup><a href="#ref5">[5]</a></sup>
+        </p>
+        
+        <p>
+          He was also a keen botanist and one of the founders and first governor of the Royal Bank 
+          of Scotland in 1727, an institution that continues to this day and whose banknotes still 
+          bear his likeness.<sup><a href="#ref10">[10]</a></sup> Despite his prominence, the 3rd 
+          Duke died without sons, and the dukedom passed to a more distant cousin.
+        </p>
+        
+        <h3 id="later-dukes">The Later Dukes</h3>
+        
+        <p>
+          From John Campbell, 4th Duke (1693–1770)—a distinguished military officer who interrogated 
+          Flora MacDonald after Bonnie Prince Charlie's escape—through the 13th Duke, the successive 
+          holders of Argyll maintained the Barony of Balvill as part of their extensive feudal 
+          holdings.
+        </p>
+        
+        <p>
+          The 8th Duke (1823–1900) served as Secretary of State for India and was a noted scientist 
+          and author. The 9th Duke (1845–1914) married Princess Louise, daughter of Queen Victoria, 
+          and served as Governor General of Canada from 1878 to 1883. The 10th Duke (1872–1949) 
+          funded the famous bell tower at Inveraray in memory of Campbells who died in the World 
+          Wars.<sup><a href="#ref5">[5]</a></sup>
+        </p>
+        
+        <p>
+          Throughout these centuries, while the Dukes of Argyll retained the feudal superiority 
+          of Balvill, the actual lands in Stirlingshire were possessed by others. By the 18th 
+          century, the Stirling family held the Balvill lands; by the 19th century, the Macfarlane 
+          family. The Dukes received feu-duties but did not occupy the property, residing instead 
+          at Inveraray Castle in Argyllshire.
+        </p>
+      </section>
 
-      <h3>2.3 The modern barony after the abolition of feudal tenure</h3>
-      <p>
-        The Abolition of Feudal Tenure etc. (Scotland) Act 2000 brought an end to the feudal system of landholding, with the principal “appointed day” falling on 28 November 2004.<sup><a href="#ref-11">[11]</a></sup><sup><a href="#ref-12">[12]</a></sup>
-        Baronies such as Balvill were thereby severed from feudal land tenure and jurisdiction, while continuing in modern law as incorporeal heritable dignities.<sup><a href="#ref-18">[18]</a></sup>
-      </p>
-    </section>
+      <section id="erosion-power">
+        <h2>The Erosion of Feudal Power (1747)</h2>
+        
+        <p>
+          The jurisdictional powers that had once made baronies significant—the right to hold 
+          courts, administer justice, and execute criminals—came to an abrupt end in 1747. The 
+          Heritable Jurisdictions (Scotland) Act, passed by the Westminster Parliament in the 
+          aftermath of the 1745 Jacobite Rising and the Battle of Culloden, abolished all private 
+          hereditary jurisdictions in Scotland.<sup><a href="#ref11">[11]</a></sup>
+        </p>
+        
+        <p>
+          While ostensibly aimed at clan chiefs whose jurisdictional powers had enabled them to 
+          raise armies for the Jacobite cause, the Act affected all Scottish heritors, including 
+          Lowland barons and even Hanoverian supporters like the Duke of Argyll. The Crown took 
+          control of appointing Sheriffs, and the role of Justiciar was transferred to the High 
+          Court of Justiciary.
+        </p>
+        
+        <p>
+          Because these jurisdictions were recognised as private property under the Act of Union 
+          of 1707, the government paid compensation to those affected (except Jacobites, whose 
+          estates had been forfeited). A total of £152,000 was distributed, with John Campbell, 
+          4th Duke of Argyll, receiving £25,000—a substantial sum reflecting the extensive 
+          jurisdictional rights he had held.<sup><a href="#ref1">[1]</a></sup>
+        </p>
+        
+        <p>
+          After 1747, baronies retained their character as feudal dignities and sources of 
+          feu-duties, but the substance of baronial power—jurisdiction over people and 
+          administration of justice—had been removed. Baronies became increasingly symbolic, 
+          though they remained heritable and continued to be bought and sold.
+        </p>
+      </section>
 
-    <section id="s3" aria-labelledby="h-s3">
-      <h2 id="h-s3">3. Pre-1630 Context: Argyll Lordship and Feudal Authority</h2>
-      <p>
-        By the early seventeenth century, the Campbells of Argyll had emerged as one of the most powerful noble families in Scotland. Through royal favour, legal consolidation, and political influence,
-        they exercised extensive authority across the western seaboard and adjoining mainland regions.
-      </p>
-      <p>
-        At this period, noble power was expressed less through fixed territorial boundaries than through overlapping layers of landholding, superiority, office, and jurisdiction.
-        Within this context, the creation of additional baronies served to formalise and stabilise existing rights within the Crown’s feudal framework.
-      </p>
-    </section>
+      <section id="modern-transformation">
+        <h2>The Modern Transformation (2000–2004)</h2>
+        
+        <p>
+          By the late 20th century, Scotland remained unique in Europe for retaining feudal land 
+          tenure. While feudalism had been abolished elsewhere, the Scottish system—whereby land 
+          was held ultimately from the Crown through a chain of feudal superiors—persisted as a 
+          method of controlling urban development and collecting feudal payments.
+        </p>
+        
+        <p>
+          In 1999, the Scottish Law Commission published a report recommending the abolition of 
+          feudal tenure as part of comprehensive land reform.<sup><a href="#ref12">[12]</a></sup> 
+          While the report's primary concern was land law, it necessarily addressed the question 
+          of what would happen to feudal baronies.
+        </p>
+        
+        <p>
+          The Commission noted that baronies had become detached from any meaningful connection 
+          to jurisdiction or governance: "The dignity of baron would become a 'floating' right or 
+          privilege" no longer connected to an interest in land.<sup><a href="#ref12">[12]</a></sup> 
+          However, the Commission recommended against abolishing baronies entirely, instead 
+          proposing that they be preserved as incorporeal heritable property—legal rights that 
+          could be owned and transferred but had no connection to land.
+        </p>
+        
+        <p>
+          The resulting Abolition of Feudal Tenure etc. (Scotland) Act 2000 received Royal Assent 
+          on 9 June 2000 and was brought into force on 28 November 2004.<sup><a href="#ref13">[13]</a></sup> 
+          The appointed day—Martinmas, a traditional Scottish term day—marked the end of feudalism 
+          in Scotland after nearly 900 years.
+        </p>
+        
+        <p>
+          For the Barony of Balvill and all other Scottish baronies, the 2004 implementation meant:
+        </p>
+        
+        <ul style="margin-left: 2rem; margin-bottom: 1.25rem;">
+          <li style="margin-bottom: 0.75rem;">The feudal relationship between superior and vassal was abolished. The Duke of Argyll's feudal superiority over the Balvill lands ended.</li>
+          <li style="margin-bottom: 0.75rem;">All land in Scotland became held outright by its possessor (<em>dominium plenum</em>), free of feudal obligations.</li>
+          <li style="margin-bottom: 0.75rem;">The barony itself—the dignity—was preserved as incorporeal heritable property, capable of being owned, transferred by assignation, and inherited.</li>
+          <li style="margin-bottom: 0.75rem;">The barony no longer carried any rights over land, jurisdiction over people, or entitlement to feudal payments.</li>
+        </ul>
+        
+        <p>
+          This transformation fundamentally changed what a Scottish barony is. From 1630 to 2004, 
+          Balvill had been a feudal tenure—a way of holding land with associated rights and 
+          obligations. After 2004, it became purely a dignity—a recognised title of honour under 
+          Scots law, but one with no territorial or jurisdictional content.
+        </p>
+        
+        <p>
+          Various registration systems emerged to record these dignities. The Scottish Barony 
+          Register maintains an official register of baronies, entries in which may be marked 
+          private if the holder chooses. Authoritative directories such as Debrett's also list 
+          recognised Scottish baronies.<sup><a href="#ref14">[14]</a></sup><sup><a href="#ref15">[15]</a></sup>
+        </p>
+      </section>
 
-    <section id="s4" aria-labelledby="h-s4">
-      <h2 id="h-s4">4. Creation and Confirmation of the Barony of Balvill (1630–1633)</h2>
-      <p>
-        The Barony of Balvill was created by Crown charter under the Great Seal of Scotland on 5 August 1630, granted by King Charles I in favour of Archibald Campbell, Lord Lorne
-        (heir apparent to the earldom of Argyll).<sup><a href="#ref-2">[2]</a></sup>
-      </p>
+      <section id="transfer-2025">
+        <h2>The 2025 Transfer</h2>
+        
+        <p>
+          In 2025, after 395 years of continuous association with the Campbell family and the 
+          Dukes of Argyll, the dignity of the Barony of Balvill was assigned to Mark Hopking.
+        </p>
+        
+        <p>
+          Under modern Scots law, baronies are transferred by deed of assignation—a formal legal 
+          document assigning the incorporeal right from the previous holder to the new one. The 
+          assignation was executed on 9 September 2025, transferring the barony from Torquhil Ian 
+          Campbell, 13th Duke of Argyll, to Mark Hopking.<sup><a href="#ref16">[16]</a></sup>
+        </p>
+        
+        <p>
+          Following the assignation, the transfer was registered, and the barony now appears in 
+          recognised directories and registers. The Scottish Barony Register's official list 
+          includes Balvill, with the holder's details marked as private.<sup><a href="#ref14">[14]</a></sup> 
+          Debrett's directory of feudal baronies lists Mark Hopking as Baron of Balvill.<sup><a href="#ref15">[15]</a></sup>
+        </p>
+        
+        <p>
+          The 2025 transfer represents a significant transition in the barony's long history—the 
+          first time since 1630 that it has passed outside the Campbell family. Yet it also 
+          demonstrates the continuity of Scots law: a dignity created by Crown charter in 1630, 
+          confirmed by Parliament in 1633, held through centuries of political upheaval, 
+          transformed by the abolition of feudalism in 2004, can still be recognised, transferred, 
+          and held under the law in 2025.
+        </p>
+        
+        <p>
+          The current holder has expressed his understanding of the dignity as a form of 
+          custodianship—preserving a nearly 400-year-old legal and historical entity while 
+          recognising that its significance today lies in historical continuity rather than 
+          territorial jurisdiction or political power.
+        </p>
+      </section>
 
-      <div class="note" role="note" aria-label="Explanatory note: Crown charters">
-        <strong>Crown charters (Great Seal).</strong> In early modern Scotland, a Crown charter issued under the Great Seal was a principal legal instrument by which the monarch created, altered,
-        or confirmed rights, dignities, and jurisdictions. Such charters were constitutive in effect, creating legal realities rather than merely recognising claims.
+      <div class="references" id="references">
+        <h2>References</h2>
+        <ol>
+          <li id="ref1">
+            Durie, Bruce. "The origin, nature and present state of Feudal Baronies in Scotland" 
+            (2025). Report held by the Baron of Balvill.
+            <a href="#contents" class="back-to-top">↑ Back to contents</a>
+          </li>
+          
+          <li id="ref2">
+            Bankton, Andrew McDouall, Lord. <em>Institute of the Laws of Scotland</em>, II.iii.84 
+            (Edinburgh, 1751–1753). Cited in <em>Spencer Thomas of Buquhollie v Newell</em>, 1992 
+            SLT 973 at 976C.
+            <a href="#contents" class="back-to-top">↑ Back to contents</a>
+          </li>
+          
+          <li id="ref3">
+            <em>The Records of the Parliaments of Scotland to 1707</em>, K.M. Brown et al. (eds), 
+            St Andrews, 2007–2025. Act 1428/14 concerning election of commissioners.
+            <a href="https://www.rps.ac.uk/" target="_blank" rel="noopener">Available online</a>.
+            <a href="#contents" class="back-to-top">↑ Back to contents</a>
+          </li>
+          
+          <li id="ref4">
+            <em>The Records of the Parliaments of Scotland to 1707</em>, Act 1587/7/143, 
+            "The kingis Majesties declaratioun concerning the voittis of small baronis in Parliament."
+            <a href="https://www.rps.ac.uk/trans/1587/7/143" target="_blank" rel="noopener">Available online</a>.
+            <a href="#contents" class="back-to-top">↑ Back to contents</a>
+          </li>
+          
+          <li id="ref5">
+            Durie, Bruce. "The Barony and Barons of Balvill or Balwill: An historical and genealogical 
+            report for Mark Hopking, Baron of Balvill" (2025). Report held by the Baron of Balvill.
+            <a href="#contents" class="back-to-top">↑ Back to contents</a>
+          </li>
+          
+          <li id="ref6">
+            <em>The Records of the Parliaments of Scotland to 1707</em>, 1633/6/92. Act in favour 
+            of Archibald Campbell, Lord Lorne (28 June 1633).
+            <a href="http://www.rps.ac.uk/trans/1633/6/92" target="_blank" rel="noopener">Available online</a>.
+            <a href="#contents" class="back-to-top">↑ Back to contents</a>
+          </li>
+          
+          <li id="ref7">
+            <em>Registrum Magni Sigilli Regum Scotorum</em> [Register of the Great Seal of Scotland], 
+            Vol. VIII (1620–1633), edited by John Maitland Thomson (Edinburgh, 1894), no. 1623. 
+            Charter dated 5 August 1630.
+            <a href="https://archive.org/details/registrummagnisi08scot/page/540/mode/2up" target="_blank" rel="noopener">
+              Available at Archive.org
+            </a>.
+            <a href="#contents" class="back-to-top">↑ Back to contents</a>
+          </li>
+          
+          <li id="ref8">
+            "Archibald Campbell, 1st marquess and 8th earl of Argyll," <em>Encyclopædia Britannica</em>.
+            <a href="https://www.britannica.com/biography/Archibald-Campbell-1st-Marquess-and-8th-Earl-of-Argyll" 
+               target="_blank" rel="noopener">
+              britannica.com
+            </a>.
+            <a href="#contents" class="back-to-top">↑ Back to contents</a>
+          </li>
+          
+          <li id="ref9">
+            <em>The Records of the Parliaments of Scotland to 1707</em>, 1689/6/43. "Act rescinding 
+            the forfeiture of the late Archibald Campbell, Earl of Argyll" (5 June 1689).
+            <a href="http://www.rps.ac.uk/trans/1689/6/43" target="_blank" rel="noopener">Available online</a>.
+            <a href="#contents" class="back-to-top">↑ Back to contents</a>
+          </li>
+          
+          <li id="ref10">
+            Royal Bank of Scotland. Historical note on Earl of Ilay as first governor. The Earl's 
+            portrait appears on RBS banknotes since 1987.
+            <a href="#contents" class="back-to-top">↑ Back to contents</a>
+          </li>
+          
+          <li id="ref11">
+            <em>Heritable Jurisdictions (Scotland) Act 1746</em> (20 Geo. 2 c. 43), also known 
+            as the Sheriffs Act 1747. Enacted by the Parliament of Great Britain, coming into 
+            force 1747. "Heritable jurisdictions," <em>Oxford Reference</em>. 
+            <a href="https://www.oxfordreference.com/display/10.1093/oi/authority.20110803095932563" 
+               target="_blank" rel="noopener">
+              oxfordreference.com
+            </a>; full text at 
+            <a href="https://www.legislation.gov.uk/apgb/Geo2/20/43" target="_blank" rel="noopener">
+              legislation.gov.uk
+            </a>.
+            <a href="#contents" class="back-to-top">↑ Back to contents</a>
+          </li>
+          
+          <li id="ref12">
+            Scottish Law Commission, <em>Report on Abolition of the Feudal System</em> (Scot Law Com 
+            No. 168, 1999).
+            <a href="https://www.scotlawcom.gov.uk/files/1712/8015/2730/26-07-2010_1458_725.pdf" 
+               target="_blank" rel="noopener">Available online (PDF)</a>.
+            <a href="#contents" class="back-to-top">↑ Back to contents</a>
+          </li>
+          
+          <li id="ref13">
+            <em>Abolition of Feudal Tenure etc. (Scotland) Act 2000</em> (asp 5). Passed by the 
+            Scottish Parliament on 3 May 2000; received Royal Assent 9 June 2000; came into force 
+            28 November 2004.
+            <a href="https://www.legislation.gov.uk/asp/2000/5" target="_blank" rel="noopener">
+              legislation.gov.uk
+            </a>; Explanatory Notes at 
+            <a href="https://www.legislation.gov.uk/asp/2000/5/notes" target="_blank" rel="noopener">
+              legislation.gov.uk/notes
+            </a>.
+            <a href="#contents" class="back-to-top">↑ Back to contents</a>
+          </li>
+          
+          <li id="ref14">
+            Scottish Barony Register. <em>Official Register of Baronies</em> (updated 27 December 2025).
+            <a href="https://img1.wsimg.com/blobby/go/43c9880b-e09d-4df1-8b79-6eefdc172c0a/downloads/518510d8-ac16-4580-8dc4-bcde7028997f/REGISTER%20OF%20BARONIES%20271225.pdf" 
+               target="_blank" rel="noopener">PDF available online</a>.
+            <a href="#contents" class="back-to-top">↑ Back to contents</a>
+          </li>
+          
+          <li id="ref15">
+            Debrett's. "The Feudal Baronies of Scotland."
+            <a href="https://debretts.com/directories/other-titles-2/the-feudal-baronies-of-scotland/" 
+               target="_blank" rel="noopener">debretts.com</a>.
+            <a href="#contents" class="back-to-top">↑ Back to contents</a>
+          </li>
+          
+          <li id="ref16">
+            Deed of Assignation in favour of Mark Hopking, dated 9 September 2025. Document held 
+            by the Baron of Balvill.
+            <a href="#contents" class="back-to-top">↑ Back to contents</a>
+          </li>
+        </ol>
       </div>
+    </main>
 
-      <p>
-        The barony’s name appears in multiple forms in seventeenth-century materials (including <em>Balvill</em>, <em>Balweill</em>, and <em>Baluill</em>), reflecting the absence of standardised spelling rather than
-        indicating distinct entities.<sup><a href="#ref-1">[1]</a></sup>
-      </p>
-      <p>
-        The charter of 1630 was subsequently ratified by Act of the Parliament of Scotland on 28 June 1633, securing the grant within the parliamentary record.<sup><a href="#ref-3">[3]</a></sup>
-      </p>
-    </section>
+    <footer>
+      <p>© <span id="copyright-year"></span> <a href="https://markhopking.co.uk/">Mark Hopking</a>. All rights reserved.</p>
+    </footer>
+  </div>
 
-    <section id="s4a" aria-labelledby="h-s4a">
-      <h2 id="h-s4a">4A. The Geographical Extent and Caput of the Barony of Balvill</h2>
-      <p>
-        The Barony of Balvill was not constituted as a compact territorial estate in the modern sense. Like many Scottish baronies erected in the early seventeenth century,
-        it is best understood through legal designation and jurisdictional association within a wider noble patrimony.<sup><a href="#ref-1">[1]</a></sup>
-      </p>
-
-      <h3>The caput of the barony</h3>
-      <p>
-        The <em>caput baroniae</em> of Balvill is identified as Balvill (also rendered Balwill), situated within the Lowland legal geography traditionally associated with what later became Stirlingshire.<sup><a href="#ref-1">[1]</a></sup>
-        At the time of creation in 1630, county and sheriffdom boundaries were not fixed in their modern form, and such designations should be understood as administrative rather than cartographic.
-      </p>
-
-      <div class="note" role="note" aria-label="Explanatory note: caput baroniae">
-        <strong>Caput baroniae.</strong> The <em>caput baroniae</em> was the nominal head place of a barony in Scots law. It provided a legal anchor for the dignity but did not necessarily serve as a residence,
-        administrative centre, or principal estate.
-      </div>
-
-      <h3>Associated lands and jurisdictional context</h3>
-      <p>
-        Although the caput is described within a Lowland legal context, documentary materials associate the barony with territories connected to Colonsay, Oronsay, and Jura as part of the wider Argyll lordship.
-        These references are best understood as reflecting feudal superiorities and jurisdictional association within a major noble estate, rather than delineating a single self-contained landed unit.<sup><a href="#ref-1">[1]</a></sup>
-      </p>
-    </section>
-
-    <section id="s4b" aria-labelledby="h-s4b">
-      <h2 id="h-s4b">4B. Minor Baronies within Great Noble Estates</h2>
-      <p>
-        Balvill exemplifies a class of Scottish baronies held by great noble houses for whom such dignities formed only a small component of a larger constellation of titles, jurisdictions, and estates.
-        Within the Argyll patrimony, Balvill was subordinate to the earldom and later dukedom, and its documentary footprint reflects that hierarchy.<sup><a href="#ref-1">[1]</a></sup>
-      </p>
-      <p>
-        Minor baronies of this kind rarely featured prominently in political or administrative records unless a specific legal act required their mention.
-        Their significance lay less in independent governance than in their contribution to the layered legal authority exercised by their holders.
-      </p>
-    </section>
-
-    <section id="s4c" aria-labelledby="h-s4c">
-      <h2 id="h-s4c">4C. Language, Naming, and Legal Identity</h2>
-      <p>
-        The historical record preserves multiple spellings of the barony’s name (including <em>Balvill</em>, <em>Balweill</em>, and <em>Baluill</em>), typical of seventeenth-century Scottish legal materials.
-        Such variation reflects orthographic practice rather than legal discontinuity.<sup><a href="#ref-1">[1]</a></sup><sup><a href="#ref-2">[2]</a></sup>
-      </p>
-      <p>
-        Later modern usage adopted the spelling <em>Barwill</em> prior to the barony’s twenty-first-century assignation. The modern restoration of the spelling <em>Balvill</em> represents a return to an early recorded form,
-        consistent with historical interpretive practice where identity of substance, not uniform spelling, is determinative.<sup><a href="#ref-1">[1]</a></sup>
-      </p>
-    </section>
-
-    <section id="s5" aria-labelledby="h-s5">
-      <h2 id="h-s5">5. The Covenanting Period and the Rise of Argyll (1638–1651)</h2>
-      <p>
-        The years following parliamentary confirmation coincided with profound political and religious upheaval in Scotland. Archibald Campbell, who succeeded as Earl of Argyll in 1638 and was later created
-        Marquess of Argyll, became a central figure in the Covenanting movement and in Scottish governance during the Wars of the Three Kingdoms.
-      </p>
-      <p>
-        Although surviving records from this period make little specific reference to Balvill, this is consistent with its status as a minor dignity within a much larger estate.
-        The barony continued implicitly as part of the complex of honours and jurisdictions held by the Marquess.<sup><a href="#ref-1">[1]</a></sup>
-      </p>
-    </section>
-
-    <section id="s6" aria-labelledby="h-s6">
-      <h2 id="h-s6">6. Forfeiture, Treason, and Annexation (1661)</h2>
-
-      <div class="note" role="note" aria-label="Explanatory note: Covenanting period and Restoration">
-        <strong>The Covenanting period and the Restoration.</strong> The Covenanting period (1638–1651) encompassed conflicts arising from opposition to royal religious policy and the governance of Scotland under Covenanting regimes.
-        The Restoration of the monarchy in 1660 returned Charles II to the throne, and leading Covenanting figures became vulnerable to prosecution for treason.
-      </div>
-
-      <p>
-        In 1661, Archibald Campbell, Marquess of Argyll, was tried for treason, convicted, and executed. His honours, estates, and jurisdictions were declared forfeited to the Crown.<sup><a href="#ref-4">[4]</a></sup>
-      </p>
-
-      <div class="note" role="note" aria-label="Explanatory note: forfeiture and baronial dignities">
-        <strong>Forfeiture and baronial dignities.</strong> Forfeiture operated upon the person and the honours held by that person, vesting affected rights temporarily in the Crown.
-        Forfeiture did not extinguish the dignity itself; rather, the dignity continued in law pending restoration or regrant.
-      </div>
-
-      <p>
-        The forfeiture necessarily affected the baronies and jurisdictions attached to the holder, including Balvill, which must be understood as vesting in the Crown by operation of law during the forfeiture period.<sup><a href="#ref-1">[1]</a></sup><sup><a href="#ref-4">[4]</a></sup>
-      </p>
-    </section>
-
-    <section id="s7" aria-labelledby="h-s7">
-      <h2 id="h-s7">7. Renewed Crisis and Second Forfeiture (1685)</h2>
-      <p>
-        In 1685, Archibald Campbell, 9th Earl of Argyll, led an uprising against the accession of James VII and II. The rebellion failed, and the Earl was executed, with consequent forfeiture and legal measures
-        affecting Argyll offices and estates.<sup><a href="#ref-5">[5]</a></sup>
-      </p>
-      <p>
-        Although shorter in duration than the forfeiture of 1661, this episode represents a renewed legal rupture affecting the Argyll dignities as a class, and therefore the dependent baronies held within the Argyll patrimony.<sup><a href="#ref-1">[1]</a></sup><sup><a href="#ref-5">[5]</a></sup>
-      </p>
-    </section>
-
-    <section id="s8" aria-labelledby="h-s8">
-      <h2 id="h-s8">8. Restoration and Rescission (1689)</h2>
-
-      <div class="note" role="note" aria-label="Explanatory note: restoration and rescission">
-        <strong>Restoration and rescission.</strong> Acts rescinding forfeiture operated to annul the legal consequences of attainder and to restore honours and rights without re-creating the dignity anew.
-      </div>
-
-      <p>
-        Acts of the Parliament of Scotland in 1689 rescinded earlier forfeitures relating to the Earls of Argyll, restoring honours and estates.<sup><a href="#ref-6">[6]</a></sup>
-        Such restoration applied comprehensively to the dignities formerly held, without listing each dependent barony individually; Balvill is therefore understood as restored along with the greater Argyll titles.<sup><a href="#ref-1">[1]</a></sup>
-      </p>
-    </section>
-
-    <section id="s9" aria-labelledby="h-s9">
-      <h2 id="h-s9">9. Eighteenth-Century Continuity and Administration</h2>
-      <p>
-        Through the eighteenth century, Balvill continued as part of the honours and jurisdictions held by the Campbells of Argyll. Documentary references in this period tend to concern administration,
-        superiorities, and obligations rather than the barony as a distinct unit.
-      </p>
-      <p>
-        A surviving document relating to duties owed against lands associated with Balwill indicates continued recognition of the barony within fiscal and administrative contexts.<sup><a href="#ref-7">[7]</a></sup>
-        Such evidence is consistent with the barony’s ongoing legal existence despite long intervals in which it is not prominently named.
-      </p>
-    </section>
-
-    <section id="s10" aria-labelledby="h-s10">
-      <h2 id="h-s10">10. Nineteenth-Century Resignations and Re-Chartering</h2>
-      <p>
-        Nineteenth-century legal practice included resignations and re-grants designed to regularise and modernise the legal basis of noble holdings. Documentary material from this period includes resignations and
-        Crown charters in favour of successive Dukes of Argyll, encompassing a range of titles and jurisdictions within the wider estate, including baronial dignities such as Balvill.<sup><a href="#ref-8">[8]</a></sup><sup><a href="#ref-9">[9]</a></sup><sup><a href="#ref-10">[10]</a></sup>
-      </p>
-
-      <div class="note" role="note" aria-label="Explanatory note: resignation">
-        <strong>Resignation (feudal conveyancing).</strong> In Scots feudal practice, resignation was a formal mechanism by which a holder surrendered a title or right to the Crown to permit re-grant under a new charter.
-        It does not imply abandonment; it commonly served renewal, consolidation, or reconfiguration of title.
-      </div>
-    </section>
-
-    <section id="s11" aria-labelledby="h-s11">
-      <h2 id="h-s11">11. Transition Toward the Modern Period</h2>
-      <p>
-        By the later nineteenth and early twentieth centuries, the practical significance of baronial jurisdictions had diminished substantially through judicial reforms and centralisation of legal authority.
-        Estate records and dispositions illustrate the transformation of the Argyll holdings into modern landed estates governed by contemporary property law, with Balvill persisting as a historical dignity rather than an operative jurisdiction.
-      </p>
-    </section>
-
-    <section id="s12" aria-labelledby="h-s12">
-      <h2 id="h-s12">12. Abolition of Feudal Tenure and the Modern Barony (Post-2000)</h2>
-      <p>
-        The Abolition of Feudal Tenure etc. (Scotland) Act 2000 dismantled the feudal system of landholding in Scotland. The appointed day for abolition was set as 28 November 2004.<sup><a href="#ref-11">[11]</a></sup><sup><a href="#ref-12">[12]</a></sup>
-        The effect was to extinguish feudal superiorities and detach baronies from land and jurisdiction, while preserving Scottish baronies as incorporeal heritable dignities in modern law.<sup><a href="#ref-18">[18]</a></sup><sup><a href="#ref-14">[14]</a></sup>
-      </p>
-    </section>
-
-    <section id="s13" aria-labelledby="h-s13">
-      <h2 id="h-s13">13. Continuity into the Twenty-First Century and Assignation (2025)</h2>
-      <p>
-        In 2025, the Barony of Balvill was assigned to its present holder, supported by documentary evidence held in private archival records.<sup><a href="#ref-17">[17]</a></sup>
-        A certificate of registration relating to the dignity is held in private records; the Scottish Barony Register’s publicly available “Official Register” lists Balvill while noting that many holders’ names are recorded as private.<sup><a href="#ref-16">[16]</a></sup><sup><a href="#ref-13">[13]</a></sup>
-        Debrett’s directory lists Balvill and names Mark Hopking as holder (2025).<sup><a href="#ref-15">[15]</a></sup>
-      </p>
-    </section>
-
-    <section id="s14" aria-labelledby="h-s14">
-      <h2 id="h-s14">14. Conclusion</h2>
-      <p>
-        The Barony of Balvill illustrates the characteristic trajectory of a minor Scottish barony held within a major noble estate. Created by Crown charter in 1630 and confirmed by Parliament in 1633,
-        it continued as a legal dignity through political upheaval, including two forfeiture crises affecting its holders, followed by restoration. Later resignations and re-chartering reflect the legal maintenance of noble holdings
-        within changing administrative and conveyancing practices. The abolition of feudal tenure transformed the legal environment, yet Balvill persisted as an incorporeal heritable dignity, now independent of land and jurisdiction.
-      </p>
-    </section>
-
-    <section id="references" class="refs" aria-labelledby="h-refs">
-      <h2 id="h-refs">References and sources</h2>
-
-      <h3>Key works and publicly accessible sources</h3>
-      <ol>
-        <li id="ref-1">
-          Durie, Bruce (2025). <em>The Barony and Barons of Balvill or Balwill</em>. Private report (copy held in the private records of Mark Hopking).
-        </li>
-        <li id="ref-11">
-          <em>Abolition of Feudal Tenure etc. (Scotland) Act 2000</em> (asp 2000/5). Legislation.gov.uk.  [oai_citation:0‡Legislation.gov.uk](https://www.legislation.gov.uk/asp/2000/5/contents)
-        </li>
-        <li id="ref-12">
-          <em>The Abolition of Feudal Tenure etc. (Scotland) Act 2000 (Appointed Day) Order 2003</em> (SSI 2003/456), art. 2 (appointed day: 28 November 2004). Legislation.gov.uk.  [oai_citation:1‡Legislation.gov.uk](https://www.legislation.gov.uk/id/ssi/2003/456/article/2)
-        </li>
-        <li id="ref-13">
-          Scottish Barony Register. “Official Register of Baronies” (public list; many holder names marked as private).  [oai_citation:2‡Scottish Barony Register](https://scottishbaronyregister.org/official-register)
-        </li>
-        <li id="ref-14">
-          Scottish Barony Register. Overview / background note on the Register and the 2004 appointed day (public website).  [oai_citation:3‡Scottish Barony Register](https://scottishbaronyregister.org/)
-        </li>
-        <li id="ref-15">
-          Debrett’s. “The Feudal Baronies of Scotland” (directory entry listing Balvill; holder shown as Mark Hopking, 2025).  [oai_citation:4‡Debretts](https://debretts.com/directories/other-titles-2/the-feudal-baronies-of-scotland/)
-        </li>
-        <li id="ref-18">
-          “The origin, nature and present state of Feudal Baronies in Scotland” (2025 report; copy held in the private records of Mark Hopking).
-        </li>
-      </ol>
-
-      <h3>Primary documentary sources consulted (private archival holdings)</h3>
-      <p class="meta">
-        The following documents are held in the private records of Mark Hopking (unless otherwise stated). Many are copies or extracts from National Records of Scotland and related archival collections.
-      </p>
-      <ol>
-        <li id="ref-2">
-          “1630-08-05 - Great Seal - Crown Charter Baluill.PDF” (Register of the Great Seal extract / copy).
-        </li>
-        <li id="ref-3">
-          “1633-06-28 Act of Parliament confirming 1630 - BALVILL.pdf” (Act of Parliament ratifying the Crown charter).
-        </li>
-        <li id="ref-4">
-          “1661-05-01 [Marquis of Argyll's treason process; interlocutors read; instruments taken].pdf” (treason process material).
-        </li>
-        <li id="ref-5">
-          “1685-06-16 Act of annexation of the offices belonging to the late [Archibald Campbell], earl of Argyll.pdf” (annexation/forfeiture-related instrument).
-        </li>
-        <li id="ref-6">
-          “1689-06-05 Act rescinding the forfeiture of the late [Archibald Campbell], earl of Argyll.pdf” and
-          “1689-08-01 Act rescinding the forfeiture of the late [Archibald Campbell], earl of Argyll.pdf” (rescission/restoration instruments).
-        </li>
-        <li id="ref-7">
-          “1701-03-27 Duties owed against Lands of Balwill.pdf” (administrative/fiscal reference to Balwill).
-        </li>
-        <li id="ref-8">
-          “1806-08-14 Signature of Resignation.pdf” (resignation instrument).
-        </li>
-        <li id="ref-9">
-          “1816-07-16 Signature of Resignation.pdf” (resignation instrument).
-        </li>
-        <li id="ref-10">
-          “1840-02-20 Signature of Crown Charter of Resignation in favour of George William Duke of Argyll signeted.pdf” (Crown charter following resignation).
-        </li>
-        <li id="ref-16">
-          “Certificate of Registration - Dignity of the Barony of Balvill.PDF” (certificate of registration; private record).
-        </li>
-        <li id="ref-17">
-          “2025-09-09 Assignation ifo Mark Hopking - Barony of Balvill.PDF” (assignation; private record).
-        </li>
-      </ol>
-
-    </section>
-  </main>
-
- <footer class="site-footer">
-  <p>
-    © <span id="copyright-year"></span>
-    <a href="https://markhopking.co.uk/">markhopking.co.uk</a>.
-    All rights reserved.
-  </p>
-  <p>
-    Content is presented in a neutral, third-party style with citations distinguishing
-    published sources from privately held records.
-  </p>
-</footer>
-
-<script>
-  document.getElementById("copyright-year").textContent = new Date().getFullYear();
-</script>
+  <script>
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
