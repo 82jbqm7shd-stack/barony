@@ -1,593 +1,659 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Barony of Balvill</title>
-  <meta name="description" content="The Barony of Balvill, a Scottish feudal barony created by Crown charter in 1630, now held as an incorporeal heritable dignity since 2025." />
-  <link rel="canonical" href="https://barony.markhopking.co.uk/" />
-  
-  <style>
-    :root {
-      --text-primary: #1a1a1a;
-      --text-secondary: #4a4a4a;
-      --bg-primary: #ffffff;
-      --bg-secondary: #f8f9fa;
-      --border-color: #d1d5db;
-      --link-color: #2563eb;
-      --link-hover: #1e40af;
-    }
-    
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: "Charter", "Georgia", "Times New Roman", serif;
-      line-height: 1.65;
-      color: var(--text-primary);
-      background-color: var(--bg-primary);
-      font-size: 18px;
-    }
-    
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem;
-    }
-    
-    nav {
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 1rem;
-      margin-bottom: 2.5rem;
-      font-size: 0.95rem;
-    }
-    
-    nav a {
-      color: var(--link-color);
-      text-decoration: none;
-      margin-right: 1rem;
-    }
-    
-    nav a:hover {
-      text-decoration: underline;
-    }
-    
-    h1 {
-      font-family: "Palatino", "Georgia", serif;
-      font-size: 2.5rem;
-      font-weight: 600;
-      line-height: 1.2;
-      margin-bottom: 0.5rem;
-      letter-spacing: -0.02em;
-    }
-    
-    h2 {
-      font-family: "Palatino", "Georgia", serif;
-      font-size: 1.75rem;
-      font-weight: 600;
-      line-height: 1.3;
-      margin-top: 2.5rem;
-      margin-bottom: 1rem;
-      letter-spacing: -0.01em;
-    }
-    
-    h3 {
-      font-size: 1.3rem;
-      font-weight: 600;
-      margin-top: 2rem;
-      margin-bottom: 0.75rem;
-    }
-    
-    p {
-      margin-bottom: 1.25rem;
-    }
-    
-    .lead {
-      font-size: 1.15rem;
-      line-height: 1.7;
-      color: var(--text-secondary);
-      margin-bottom: 2rem;
-    }
-    
-    .infobox {
-      background: var(--bg-secondary);
-      border: 1px solid var(--border-color);
-      border-radius: 4px;
-      padding: 1.5rem;
-      margin: 2rem 0;
-    }
-    
-    .infobox h3 {
-      margin-top: 0;
-      font-size: 1.1rem;
-      border-bottom: 2px solid var(--border-color);
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
-    }
-    
-    .infobox dl {
-      display: grid;
-      grid-template-columns: 160px 1fr;
-      gap: 0.75rem 1.5rem;
-      font-size: 0.95rem;
-    }
-    
-    .infobox dt {
-      font-weight: 600;
-      color: var(--text-secondary);
-    }
-    
-    .infobox dd {
-      margin: 0;
-    }
-    
-    .timeline {
-      border-left: 3px solid var(--border-color);
-      padding-left: 1.5rem;
-      margin: 2rem 0 2rem 1rem;
-    }
-    
-    .timeline-item {
-      margin-bottom: 2rem;
-      position: relative;
-    }
-    
-    .timeline-item::before {
-      content: '';
-      position: absolute;
-      left: -1.875rem;
-      top: 0.3rem;
-      width: 0.75rem;
-      height: 0.75rem;
-      border-radius: 50%;
-      background: var(--link-color);
-      border: 3px solid var(--bg-primary);
-    }
-    
-    .timeline-year {
-      font-weight: 700;
-      font-size: 1.1rem;
-      color: var(--link-color);
-      margin-bottom: 0.25rem;
-    }
-    
-    .timeline-content {
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-    
-    a {
-      color: var(--link-color);
-      text-decoration: none;
-    }
-    
-    a:hover {
-      color: var(--link-hover);
-      text-decoration: underline;
-    }
-    
-    sup {
-      font-size: 0.75em;
-      line-height: 0;
-    }
-    
-    sup a {
-      text-decoration: none;
-    }
-    
-    .references {
-      background: var(--bg-secondary);
-      border: 1px solid var(--border-color);
-      border-radius: 4px;
-      padding: 1.5rem;
-      margin-top: 3rem;
-      font-size: 0.9rem;
-    }
-    
-    .references h2 {
-      margin-top: 0;
-      font-size: 1.3rem;
-      border-bottom: 2px solid var(--border-color);
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
-    }
-    
-    .references ol {
-      padding-left: 1.5rem;
-      margin: 0;
-    }
-    
-    .references li {
-      margin-bottom: 1rem;
-      line-height: 1.6;
-    }
-    
-    footer {
-      margin-top: 4rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--border-color);
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-      text-align: center;
-    }
-    
-    @media (max-width: 640px) {
-      body {
-        font-size: 16px;
-      }
-      
-      h1 {
-        font-size: 2rem;
-      }
-      
-      h2 {
-        font-size: 1.5rem;
-      }
-      
-      .infobox dl {
-        grid-template-columns: 1fr;
-        gap: 0.5rem;
-      }
-      
-      .infobox dt {
-        margin-top: 0.75rem;
-      }
-      
-      .infobox dt:first-child {
-        margin-top: 0;
-      }
-    }
-  </style>
-  
-  <!-- Schema.org Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://barony.markhopking.co.uk/#website",
-        "url": "https://barony.markhopking.co.uk/",
-        "name": "Barony of Balvill",
-        "description": "Official website for the Barony of Balvill, a Scottish feudal barony created 1630",
-        "inLanguage": "en-GB",
-        "publisher": {
-          "@id": "https://markhopking.co.uk/#person"
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barony of Balvill | Mark Hopking</title>
+    <meta name="description" content="The Barony of Balvill: A Scottish feudal barony created by Crown charter in 1630, now recognized in Scots law as incorporeal heritable property.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://barony.markhopking.co.uk/#webpage",
-        "url": "https://barony.markhopking.co.uk/",
-        "name": "Barony of Balvill",
-        "description": "The Barony of Balvill is a Scottish feudal barony created by Crown charter in 1630. Originally a territorial feudal holding, it has existed since 2004 as an incorporeal heritable dignity under Scots law.",
-        "inLanguage": "en-GB",
-        "isPartOf": {
-          "@id": "https://barony.markhopking.co.uk/#website"
-        },
-        "about": {
-          "@id": "https://barony.markhopking.co.uk/#barony"
-        },
-        "mainEntity": {
-          "@id": "https://barony.markhopking.co.uk/#barony"
+
+        :root {
+            --primary: #1a3a52;
+            --secondary: #8b4513;
+            --accent: #c9b037;
+            --text: #2c3e50;
+            --light-bg: #f8f9fa;
+            --border: #e1e4e8;
         }
-      },
-      {
-        "@type": "Thing",
-        "@id": "https://barony.markhopking.co.uk/#barony",
-        "name": "Barony of Balvill",
-        "alternateName": ["Balvill", "Baluill", "Balwill"],
-        "description": "A Scottish baronial dignity created by Crown charter on 5 August 1630, granted to Archibald Campbell, Lord Lorne. Confirmed by Act of Parliament 28 June 1633. Held by the Campbell family and Dukes of Argyll 1630-2025, then transferred to Mark Hopking. Since 2004, exists as incorporeal heritable property under Scots law.",
-        "foundingDate": "1630-08-05",
-        "foundingLocation": {
-          "@type": "Place",
-          "name": "Balvill, Parish of Drymen, Stirlingshire, Scotland",
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 56.08,
-            "longitude": -4.50
-          }
-        },
-        "sameAs": [
-          "https://en.wikipedia.org/wiki/Baronage_of_Scotland",
-          "https://debretts.com/directories/other-titles-2/the-feudal-baronies-of-scotland/"
-        ]
-      },
-      {
-        "@type": "Person",
-        "@id": "https://markhopking.co.uk/#person",
-        "name": "Mark Hopking",
-        "url": "https://markhopking.co.uk/",
-        "owns": {
-          "@id": "https://barony.markhopking.co.uk/#barony"
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: #fff;
         }
-      },
-      {
-        "@type": "HistoricalEvent",
-        "name": "Creation of the Barony of Balvill",
-        "startDate": "1630-08-05",
-        "location": {
-          "@type": "Place",
-          "name": "Palace of Holyroodhouse, Edinburgh"
-        },
-        "description": "King Charles I granted a Crown charter under the Great Seal of Scotland creating the Barony of Balvill",
-        "organizer": {
-          "@type": "Person",
-          "name": "Charles I",
-          "jobTitle": "King of Scotland"
-        },
-        "attendee": {
-          "@type": "Person",
-          "name": "Archibald Campbell",
-          "jobTitle": "Lord Lorne"
+
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
-      },
-      {
-        "@type": "HistoricalEvent",
-        "name": "Parliamentary Confirmation of Barony of Balvill",
-        "startDate": "1633-06-28",
-        "location": {
-          "@type": "Place",
-          "name": "Scottish Parliament, Edinburgh"
-        },
-        "description": "Act of Parliament confirmed the 1630 Crown charter creating the Barony of Balvill"
-      },
-      {
-        "@type": "HistoricalEvent",
-        "name": "Abolition of Feudal Tenure",
-        "startDate": "2004-11-28",
-        "location": {
-          "@type": "Place",
-          "name": "Scotland"
-        },
-        "description": "The Abolition of Feudal Tenure etc. (Scotland) Act 2000 came into force, transforming Scottish baronies from feudal land tenures into incorporeal heritable dignities"
-      }
-    ]
-  }
-  </script>
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            color: white;
+        }
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: white;
+            padding: 4px;
+        }
+
+        .logo-text h1 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .logo-text p {
+            font-size: 0.75rem;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: opacity 0.2s;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #2c5f7c 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            font-weight: 300;
+            margin-bottom: 2rem;
+        }
+
+        .hero-meta {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            font-size: 0.95rem;
+        }
+
+        .hero-meta-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hero-meta-label {
+            opacity: 0.7;
+            font-size: 0.85rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .hero-meta-value {
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (max-width: 968px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .main-content {
+            order: 1;
+        }
+
+        .sidebar {
+            order: 2;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .info-card {
+            background: var(--light-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .info-card h3 {
+            margin-top: 0;
+            font-size: 1.25rem;
+        }
+
+        dl {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.75rem 1.5rem;
+        }
+
+        dt {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        dd {
+            margin: 0;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 2rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            margin: 0 0 1rem;
+            font-size: 1.25rem;
+        }
+
+        .card p {
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+            margin: 3rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--accent);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2.5rem;
+            padding-left: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.5rem;
+            top: 0.25rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--accent);
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px var(--accent);
+        }
+
+        .timeline-year {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content {
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .reference-link {
+            color: var(--secondary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--secondary);
+        }
+
+        .reference-link:hover {
+            opacity: 0.8;
+        }
+
+        .references {
+            margin-top: 3rem;
+            padding-top: 3rem;
+            border-top: 2px solid var(--border);
+        }
+
+        .references ol {
+            list-style-position: outside;
+            padding-left: 2rem;
+        }
+
+        .references li {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 3rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 2rem auto 0;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            text-align: center;
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, #f6f8fa 0%, #ffffff 100%);
+            border: 2px solid var(--accent);
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .cta-box h3 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background 0.2s;
+            margin-top: 1rem;
+        }
+
+        .btn:hover {
+            background: #2c5f7c;
+        }
+
+        .highlight-box {
+            background: #fff9e6;
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+        }
+    </style>
 </head>
-
 <body>
-  <div class="container">
-    <nav>
-      <a href="https://markhopking.co.uk/">← Mark Hopking</a>
-      <a href="/history.html">History of Balvill</a>
-      <a href="https://heraldry.markhopking.co.uk/">Heraldry</a>
-    </nav>
-
     <header>
-      <h1>Barony of Balvill</h1>
-      <p class="lead">
-        The Barony of Balvill is a Scottish feudal barony created by Crown charter in 1630. 
-        Originally a territorial feudal holding, it has existed since 2004 as an incorporeal 
-        heritable dignity under Scots law.
-      </p>
+        <div class="header-content">
+            <a href="https://markhopking.co.uk/" class="logo-section">
+                <img src="Mark_Hopking.png" alt="Arms of Mark Hopking" class="logo-img">
+                <div class="logo-text">
+                    <h1>Mark Hopking</h1>
+                    <p>Mariner • Baron • Armiger</p>
+                </div>
+            </a>
+            <nav>
+                <a href="https://marine.markhopking.co.uk/">Maritime</a>
+                <a href="https://barony.markhopking.co.uk/">Barony</a>
+                <a href="https://heraldry.markhopking.co.uk/">Heraldry</a>
+                <a href="https://genealogy.markhopking.co.uk/">Genealogy</a>
+            </nav>
+        </div>
     </header>
 
-    <main>
-      <div class="infobox">
-        <h3>Key Facts</h3>
-        <dl>
-          <dt>Created</dt>
-          <dd>5 August 1630</dd>
-          
-          <dt>Confirmation</dt>
-          <dd>28 June 1633 (Act of Parliament)</dd>
-          
-          <dt>Original grantee</dt>
-          <dd>Archibald Campbell, Lord Lorne</dd>
-          
-          <dt>Caput</dt>
-          <dd>Balvill, Parish of Drymen, Stirlingshire</dd>
-          
-          <dt>Held by Argyll</dt>
-          <dd>1630–2025 (395 years)</dd>
-          
-          <dt>Current holder</dt>
-          <dd>Mark Hopking (since 2025)</dd>
-          
-          <dt>Legal status</dt>
-          <dd>Incorporeal heritable property</dd>
-        </dl>
-      </div>
-
-      <section>
-        <h2>Understanding Scottish Baronies</h2>
-        
-        <p>
-          Scottish feudal baronies are a distinct class of dignity under Scots law, substantially 
-          different from peerages or English lordships of the manor.<sup><a href="#ref1">[1]</a></sup> 
-          They originated in the 12th century as grants of land held directly from the Crown, carrying 
-          with them jurisdictional and economic privileges.
-        </p>
-        
-        <p>
-          Crucially, Scottish barons were never peers. Unlike the lowest rank of the Scottish peerage 
-          (Lords of Parliament), feudal barons did not sit in Parliament after 1428, when they began 
-          electing commissioners to represent them in the Estate of the Barons alongside burgh 
-          representatives.<sup><a href="#ref2">[2]</a></sup> This distinction became permanent in 1587.
-        </p>
-        
-        <h3>The Modern Barony</h3>
-        
-        <p>
-          The Abolition of Feudal Tenure etc. (Scotland) Act 2000 fundamentally transformed Scottish 
-          baronies.<sup><a href="#ref3">[3]</a></sup> When the Act came into force on 28 November 2004, 
-          it severed the centuries-old connection between baronies and land ownership. Feudal tenure 
-          was abolished, but the "dignity of baron" was preserved as incorporeal heritable property—a 
-          legal right that can be owned, transferred, and inherited, but exists independently of any 
-          land.
-        </p>
-        
-        <p>
-          Today, a Scottish barony confers no territorial jurisdiction, no automatic land ownership, 
-          and no seat in Parliament. It is a recognised dignity with historical significance, recorded 
-          in registers such as the Scottish Barony Register and listed in authoritative sources including 
-          Debrett's.<sup><a href="#ref4">[4]</a></sup><sup><a href="#ref5">[5]</a></sup>
-        </p>
-      </section>
-
-      <section>
-        <h2>The Barony of Balvill</h2>
-        
-        <p>
-          Balvill was created as a feudal barony by King Charles I on 5 August 1630, granted to 
-          Archibald Campbell, Lord Lorne, who would later become the 8th Earl and 1st Marquess of 
-          Argyll.<sup><a href="#ref6">[6]</a></sup> The charter united various lands and rights into a 
-          single barony, designating the manor place of Balvill in the Parish of Drymen, Stirlingshire, 
-          as the principal messuage or <em>caput baroniae</em>.
-        </p>
-        
-        <p>
-          What made Balvill distinctive was its composite nature. While the caput lay in mainland 
-          Stirlingshire, the barony also incorporated holdings in the Inner Hebrides—including lands 
-          in Jura, the island of Oronsay, and territories in Colonsay—creating a geographically 
-          dispersed feudal domain that reflected the extensive Campbell territorial interests in western 
-          Scotland.<sup><a href="#ref6">[6]</a></sup>
-        </p>
-        
-        <p>
-          The creation was confirmed by Act of Parliament on 28 June 1633, cementing the barony's legal 
-          standing.<sup><a href="#ref7">[7]</a></sup> For nearly four centuries, Balvill remained 
-          continuously associated with the Campbell family and the Dukes of Argyll, passing through 
-          successive generations until 2025.
-        </p>
-      </section>
-
-      <section>
-        <h2>Timeline of Key Events</h2>
-        
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-year">1630</div>
-            <div class="timeline-content">
-              Crown charter creates the Barony of Balvill, granted to Archibald Campbell, Lord Lorne, 
-              uniting various Campbell holdings into a single baronial dignity with its caput at Balvill 
-              in Stirlingshire.
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Barony of Balvill</h1>
+            <p class="hero-subtitle">A Scottish feudal barony created by Crown charter in 1630, now recognized in Scots law as incorporeal heritable property</p>
+            <div class="hero-meta">
+                <div class="hero-meta-item">
+                    <span class="hero-meta-label">Created</span>
+                    <span class="hero-meta-value">5 August 1630</span>
+                </div>
+                <div class="hero-meta-item">
+                    <span class="hero-meta-label">Confirmed</span>
+                    <span class="hero-meta-value">28 June 1633</span>
+                </div>
+                <div class="hero-meta-item">
+                    <span class="hero-meta-label">Caput</span>
+                    <span class="hero-meta-value">Balvill, Stirlingshire</span>
+                </div>
+                <div class="hero-meta-item">
+                    <span class="hero-meta-label">Current Baron</span>
+                    <span class="hero-meta-value">Mark Hopking</span>
+                </div>
             </div>
-          </div>
-          
-          <div class="timeline-item">
-            <div class="timeline-year">1633</div>
-            <div class="timeline-content">
-              Act of Parliament confirms the barony, providing formal legislative recognition alongside 
-              the earlier Crown charter.
-            </div>
-          </div>
-          
-          <div class="timeline-item">
-            <div class="timeline-year">1661–1685</div>
-            <div class="timeline-content">
-              Turbulent period: the 8th Earl (1st Marquess) of Argyll executed for treason in 1661; 
-              his son, the 9th Earl, executed in 1685 following the failure of Argyll's Rising against 
-              James VII. Both forfeitures were later rescinded.
-            </div>
-          </div>
-          
-          <div class="timeline-item">
-            <div class="timeline-year">1747</div>
-            <div class="timeline-content">
-              Heritable Jurisdictions (Scotland) Act abolishes the jurisdictional powers traditionally 
-              held by Scottish barons, including the Barony of Balvill. Baronies remain as dignities 
-              but lose their legal and judicial authority.
-            </div>
-          </div>
-          
-          <div class="timeline-item">
-            <div class="timeline-year">2004</div>
-            <div class="timeline-content">
-              The Abolition of Feudal Tenure etc. (Scotland) Act 2000 comes into force, transforming 
-              Balvill and all Scottish baronies from feudal land tenures into incorporeal heritable 
-              dignities, severing the historic connection between barony and land ownership.
-            </div>
-          </div>
-          
-          <div class="timeline-item">
-            <div class="timeline-year">2025</div>
-            <div class="timeline-content">
-              After 395 years of continuous association with the Campbell family and the Dukes of Argyll, 
-              the dignity of the Barony of Balvill is assigned to Mark Hopking and registered accordingly.
-            </div>
-          </div>
         </div>
-      </section>
+    </div>
 
-      <section>
-        <p>
-          For a detailed examination of the barony's creation, the complex relationship between feudal 
-          superiority and land ownership, the Campbell dynasty's turbulent history, and the legal 
-          evolution of Scottish baronies from medieval feudal holdings to modern incorporeal dignities, 
-          see the <a href="/history.html">comprehensive history of the Barony of Balvill</a>.
-        </p>
-      </section>
+    <div class="container">
+        <div class="content-grid">
+            <div class="main-content">
+                <h2>Understanding Scottish Baronies</h2>
+                
+                <p>Scottish feudal baronies represent a distinct class of dignity under Scots law, substantially different from peerages or English lordships of the manor. They originated in the 12th century as grants of land held directly from the Crown, carrying with them jurisdictional and economic privileges.</p>
 
-      <div class="references">
-        <h2>References</h2>
-        <ol>
-          <li id="ref1">
-            Durie, Bruce. "The origin, nature and present state of Feudal Baronies in Scotland" 
-            (2025). Report held by the Baron of Balvill.
-          </li>
-          
-          <li id="ref2">
-            <em>The Records of the Parliaments of Scotland to 1707</em>, K.M. Brown et al. (eds), 
-            St Andrews, 2007–2025. Act 1587/7/143. 
-            <a href="https://www.rps.ac.uk/trans/1587/7/143" target="_blank" rel="noopener">
-              Available online
-            </a>.
-          </li>
-          
-          <li id="ref3">
-            <em>Abolition of Feudal Tenure etc. (Scotland) Act 2000</em> (asp 5). 
-            <a href="https://www.legislation.gov.uk/asp/2000/5" target="_blank" rel="noopener">
-              legislation.gov.uk
-            </a>.
-          </li>
-          
-          <li id="ref4">
-            Scottish Barony Register. <em>Official Register of Baronies</em> (updated 27 December 2025). 
-            <a href="https://img1.wsimg.com/blobby/go/43c9880b-e09d-4df1-8b79-6eefdc172c0a/downloads/518510d8-ac16-4580-8dc4-bcde7028997f/REGISTER%20OF%20BARONIES%20271225.pdf" target="_blank" rel="noopener">
-              PDF available online
-            </a>.
-          </li>
-          
-          <li id="ref5">
-            Debrett's. "The Feudal Baronies of Scotland." 
-            <a href="https://debretts.com/directories/other-titles-2/the-feudal-baronies-of-scotland/" target="_blank" rel="noopener">
-              debretts.com
-            </a>.
-          </li>
-          
-          <li id="ref6">
-            <em>Registrum Magni Sigilli Regum Scotorum</em> [Register of the Great Seal of Scotland], 
-            Vol. VIII (1620–1633), edited by John Maitland Thomson (Edinburgh, 1894), no. 1623. 
-            Charter dated 5 August 1630. 
-            <a href="https://archive.org/details/registrummagnisi08scot/page/540/mode/2up" target="_blank" rel="noopener">
-              Available at Archive.org
-            </a>.
-          </li>
-          
-          <li id="ref7">
-            <em>The Records of the Parliaments of Scotland to 1707</em>, 1633/6/92. 
-            Act in favour of Archibald Campbell, Lord Lorne (28 June 1633). 
-            <a href="http://www.rps.ac.uk/trans/1633/6/92" target="_blank" rel="noopener">
-              Available online
-            </a>.
-          </li>
-        </ol>
-      </div>
-    </main>
+                <p>Crucially, Scottish barons were never peers. Unlike the lowest rank of the Scottish peerage (Lords of Parliament), feudal barons did not sit in Parliament after 1428, when they began electing commissioners to represent them in the Estate of the Barons alongside burgh representatives. This distinction became permanent in 1587.</p>
+
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-icon">📜</div>
+                        <h3>Historical Foundation</h3>
+                        <p>Created in the medieval period as territorial feudal holdings, granted directly by the Crown with jurisdictional rights over the land and its inhabitants.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">⚖️</div>
+                        <h3>Legal Transformation</h3>
+                        <p>The Abolition of Feudal Tenure Act 2000 transformed baronies from land-based feudal tenures into incorporeal heritable dignities.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🏛️</div>
+                        <h3>Modern Status</h3>
+                        <p>Today, Scottish baronies are recognized dignities with historical significance, recorded in official registers and listed in authoritative sources.</p>
+                    </div>
+                </div>
+
+                <h3>The Modern Barony</h3>
+                
+                <p>The Abolition of Feudal Tenure etc. (Scotland) Act 2000 fundamentally transformed Scottish baronies. When the Act came into force on 28 November 2004, it severed the centuries-old connection between baronies and land ownership. Feudal tenure was abolished, but the "dignity of baron" was preserved as incorporeal heritable property—a legal right that can be owned, transferred, and inherited, but exists independently of any land.</p>
+
+                <div class="highlight-box">
+                    <p>Today, a Scottish barony confers no territorial jurisdiction, no automatic land ownership, and no seat in Parliament. It is a recognized dignity with historical significance, representing continuity with Scotland's feudal past while existing within modern property law.</p>
+                </div>
+
+                <h2>The Barony of Balvill</h2>
+
+                <p>Balvill was created as a feudal barony by King Charles I on 5 August 1630, granted to Archibald Campbell, Lord Lorne, who would later become the 8th Earl and 1st Marquess of Argyll. The charter united various lands and rights into a single barony, designating the manor place of Balvill in the Parish of Drymen, Stirlingshire, as the principal messuage or <em>caput baroniae</em>.</p>
+
+                <p>What made Balvill distinctive was its composite nature. While the caput lay in mainland Stirlingshire, the barony also incorporated holdings in the Inner Hebrides—including lands in Jura, the island of Oronsay, and territories in Colonsay—creating a geographically dispersed feudal domain that reflected the extensive Campbell territorial interests in western Scotland.</p>
+
+                <p>The creation was confirmed by Act of Parliament on 28 June 1633, cementing the barony's legal standing. For nearly four centuries, Balvill remained continuously associated with the Campbell family and the Dukes of Argyll, passing through successive generations until 2025.</p>
+
+                <h2>Timeline of Key Events</h2>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">1630</div>
+                        <div class="timeline-content">
+                            Crown charter creates the Barony of Balvill, granted to Archibald Campbell, Lord Lorne, uniting various Campbell holdings into a single baronial dignity with its caput at Balvill in Stirlingshire.
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">1633</div>
+                        <div class="timeline-content">
+                            Act of Parliament confirms the barony, providing formal legislative recognition alongside the earlier Crown charter.
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">1661–1685</div>
+                        <div class="timeline-content">
+                            Turbulent period: the 8th Earl (1st Marquess) of Argyll executed for treason in 1661; his son, the 9th Earl, executed in 1685 following the failure of Argyll's Rising against James VII. Both forfeitures were later rescinded.
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">1747</div>
+                        <div class="timeline-content">
+                            Heritable Jurisdictions (Scotland) Act abolishes the jurisdictional powers traditionally held by Scottish barons, including the Barony of Balvill. Baronies remain as dignities but lose their legal and judicial authority.
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">2004</div>
+                        <div class="timeline-content">
+                            The Abolition of Feudal Tenure etc. (Scotland) Act 2000 comes into force, transforming Balvill and all Scottish baronies from feudal land tenures into incorporeal heritable dignities, severing the historic connection between barony and land ownership.
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">2025</div>
+                        <div class="timeline-content">
+                            After 395 years of continuous association with the Campbell family and the Dukes of Argyll, the dignity of the Barony of Balvill is assigned to Mark Hopking and registered accordingly.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-box">
+                    <h3>Comprehensive History</h3>
+                    <p>For a detailed examination of the barony's creation, the complex relationship between feudal superiority and land ownership, the Campbell dynasty's turbulent history, and the legal evolution of Scottish baronies from medieval feudal holdings to modern incorporeal dignities.</p>
+                    <a href="/history.html" class="btn">Read Full History</a>
+                </div>
+
+                <div class="references">
+                    <h2>References</h2>
+                    <ol>
+                        <li>Durie, Bruce. "The origin, nature and present state of Feudal Baronies in Scotland" (2025). Report held by the Baron of Balvill.</li>
+                        <li><em>The Records of the Parliaments of Scotland to 1707</em>, K.M. Brown et al. (eds), St Andrews, 2007–2025. Act 1587/7/143. <a href="https://www.rps.ac.uk/trans/1587/7/143" class="reference-link">Available online</a>.</li>
+                        <li><em>Abolition of Feudal Tenure etc. (Scotland) Act 2000</em> (asp 5). <a href="https://www.legislation.gov.uk/asp/2000/5" class="reference-link">legislation.gov.uk</a>.</li>
+                        <li>Scottish Barony Register. <em>Official Register of Baronies</em> (updated 27 December 2025). <a href="https://img1.wsimg.com/blobby/go/43c9880b-e09d-4df1-8b79-6eefdc172c0a/downloads/518510d8-ac16-4580-8dc4-bcde7028997f/REGISTER%20OF%20BARONIES%20271225.pdf" class="reference-link">PDF available online</a>.</li>
+                        <li>Debrett's. "The Feudal Baronies of Scotland." <a href="https://debretts.com/directories/other-titles-2/the-feudal-baronies-of-scotland/" class="reference-link">debretts.com</a>.</li>
+                        <li><em>Registrum Magni Sigilli Regum Scotorum</em> [Register of the Great Seal of Scotland], Vol. VIII (1620–1633), edited by John Maitland Thomson (Edinburgh, 1894), no. 1623. Charter dated 5 August 1630. <a href="https://archive.org/details/registrummagnisi08scot/page/540/mode/2up" class="reference-link">Available at Archive.org</a>.</li>
+                        <li><em>The Records of the Parliaments of Scotland to 1707</em>, 1633/6/92. Act in favour of Archibald Campbell, Lord Lorne (28 June 1633). <a href="http://www.rps.ac.uk/trans/1633/6/92" class="reference-link">Available online</a>.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <aside class="sidebar">
+                <div class="info-card">
+                    <h3>Barony Details</h3>
+                    <dl>
+                        <dt>Created</dt>
+                        <dd>5 August 1630</dd>
+                        
+                        <dt>Confirmation</dt>
+                        <dd>28 June 1633 (Act of Parliament)</dd>
+                        
+                        <dt>Original grantee</dt>
+                        <dd>Archibald Campbell, Lord Lorne</dd>
+                        
+                        <dt>Caput</dt>
+                        <dd>Balvill, Parish of Drymen, Stirlingshire</dd>
+                        
+                        <dt>Held by Argyll</dt>
+                        <dd>1630–2025 (395 years)</dd>
+                        
+                        <dt>Current holder</dt>
+                        <dd>Mark Hopking (since 2025)</dd>
+                        
+                        <dt>Legal status</dt>
+                        <dd>Incorporeal heritable property</dd>
+                    </dl>
+                </div>
+
+                <div class="info-card">
+                    <h3>Documentation</h3>
+                    <dl>
+                        <dt>Crown Charter</dt>
+                        <dd>Register of Great Seal, Vol. VIII, No. 1623</dd>
+                        
+                        <dt>Parliamentary Act</dt>
+                        <dd>1633/6/92</dd>
+                        
+                        <dt>Registry</dt>
+                        <dd>Scottish Barony Register</dd>
+                        
+                        <dt>Listed in</dt>
+                        <dd>Debrett's Baronies of Scotland</dd>
+                    </dl>
+                </div>
+
+                <div class="info-card">
+                    <h3>Related Resources</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.75rem;"><a href="https://heraldry.markhopking.co.uk/" class="reference-link">Heraldry & Armorial Achievement</a></li>
+                        <li style="margin-bottom: 0.75rem;"><a href="https://genealogy.markhopking.co.uk/" class="reference-link">Genealogy & Lineage</a></li>
+                        <li style="margin-bottom: 0.75rem;"><a href="/history.html" class="reference-link">Full History of Balvill</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
 
     <footer>
-      <p>© <span id="copyright-year"></span> <a href="https://markhopking.co.uk/">Mark Hopking</a>. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Sections</h4>
+                <ul>
+                    <li><a href="https://marine.markhopking.co.uk/">Maritime Career</a></li>
+                    <li><a href="https://barony.markhopking.co.uk/">Barony of Balvill</a></li>
+                    <li><a href="https://heraldry.markhopking.co.uk/">Heraldry</a></li>
+                    <li><a href="https://genealogy.markhopking.co.uk/">Genealogy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/markhopking/">LinkedIn</a></li>
+                    <li><a href="https://www.facebook.com/markhopking">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/markhopking/">Instagram</a></li>
+                    <li><a href="https://x.com/markhopking">X (Twitter)</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="https://debretts.com/directories/other-titles-2/the-feudal-baronies-of-scotland/">Debrett's Baronies</a></li>
+                    <li><a href="https://roll.baronage.com/baron/mark-hopking">Baronage Roll</a></li>
+                    <li><a href="https://www.rps.ac.uk/">Records of Parliament</a></li>
+                    <li><a href="https://fellows.socantscot.org/">Society of Antiquaries</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© Mark Hopking. All rights reserved.</p>
+            <p>Content presented in a neutral, third-party style with citations distinguishing published sources from privately held records.</p>
+        </div>
     </footer>
-  </div>
-
-  <script>
-    document.getElementById('copyright-year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
