@@ -12,30 +12,21 @@
             box-sizing: border-box;
         }
 
-        :root {
-            --primary: #1a3a52;
-            --secondary: #8b4513;
-            --accent: #c9b037;
-            --text: #2c3e50;
-            --light-bg: #f8f9fa;
-            --border: #e1e4e8;
-        }
-
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-            line-height: 1.7;
-            color: var(--text);
+            line-height: 1.6;
+            color: #333;
             background: #fff;
         }
 
+        /* Header - matching main page exactly */
         header {
-            background: var(--primary);
-            color: white;
+            background: #fff;
+            border-bottom: 1px solid #ddd;
             padding: 1rem 2rem;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
         .header-content {
@@ -46,33 +37,33 @@
             align-items: center;
         }
 
-        .logo-section {
+        .logo-link {
             display: flex;
             align-items: center;
             gap: 1rem;
             text-decoration: none;
-            color: white;
+            color: #333;
         }
 
         .logo-img {
-            width: 50px;
-            height: 50px;
+            width: 48px;
+            height: 48px;
             border-radius: 50%;
-            background: white;
-            padding: 4px;
         }
 
         .logo-text h1 {
             font-size: 1.25rem;
             font-weight: 600;
-            margin-bottom: 0.25rem;
+            margin: 0;
+            color: #333;
         }
 
-        .logo-text p {
+        .logo-text .subtitle {
             font-size: 0.75rem;
-            opacity: 0.9;
+            color: #666;
             text-transform: uppercase;
             letter-spacing: 1px;
+            margin-top: 0.125rem;
         }
 
         nav {
@@ -81,158 +72,89 @@
         }
 
         nav a {
-            color: white;
+            color: #0366d6;
             text-decoration: none;
             font-size: 0.95rem;
-            transition: opacity 0.2s;
+            transition: color 0.2s;
         }
 
         nav a:hover {
-            opacity: 0.8;
+            color: #0256c4;
+            text-decoration: underline;
         }
 
-        .hero {
-            background: linear-gradient(135deg, var(--primary) 0%, #2c5f7c 100%);
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
+        /* Intro section - matching main page style */
+        .intro-section {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
         }
 
-        .hero-content {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
+        .intro-section h2 {
+            font-size: 2rem;
             font-weight: 700;
-            margin-bottom: 1rem;
-            letter-spacing: -1px;
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
         }
 
-        .hero-subtitle {
+        .intro-subtitle {
             font-size: 1.25rem;
-            opacity: 0.95;
-            font-weight: 300;
-            margin-bottom: 2rem;
+            color: #333;
+            margin-bottom: 1.5rem;
         }
 
-        .hero-meta {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-            font-size: 0.95rem;
+        .intro-section p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 1rem;
         }
 
-        .hero-meta-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .hero-meta-label {
-            opacity: 0.7;
-            font-size: 0.85rem;
-            margin-bottom: 0.25rem;
-        }
-
-        .hero-meta-value {
-            font-weight: 600;
-        }
-
+        /* Main content area */
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 3rem 2rem;
+            padding: 2rem;
         }
 
-        .content-grid {
+        .content-wrapper {
             display: grid;
-            grid-template-columns: 2fr 1fr;
+            grid-template-columns: 1fr;
             gap: 3rem;
-            margin-bottom: 3rem;
-        }
-
-        @media (max-width: 968px) {
-            .content-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .main-content {
-            order: 1;
-        }
-
-        .sidebar {
-            order: 2;
         }
 
         h2 {
-            font-size: 2rem;
-            color: var(--primary);
-            margin-bottom: 1.5rem;
+            font-size: 1.75rem;
             font-weight: 700;
+            margin: 2.5rem 0 1rem;
+            color: #1a1a1a;
         }
 
         h3 {
-            font-size: 1.5rem;
-            color: var(--primary);
-            margin: 2rem 0 1rem;
-            font-weight: 600;
-        }
-
-        p {
-            margin-bottom: 1rem;
-        }
-
-        .info-card {
-            background: var(--light-bg);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .info-card h3 {
-            margin-top: 0;
             font-size: 1.25rem;
-        }
-
-        dl {
-            display: grid;
-            grid-template-columns: auto 1fr;
-            gap: 0.75rem 1.5rem;
-        }
-
-        dt {
             font-weight: 600;
-            color: var(--primary);
+            margin: 2rem 0 1rem;
+            color: #1a1a1a;
         }
 
-        dd {
-            margin: 0;
-        }
-
+        /* Card grid - matching main page */
         .card-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
-            margin: 3rem 0;
+            margin: 2rem 0;
         }
 
         .card {
-            background: white;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 2rem;
-            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 1.5rem;
+            background: #fff;
+            transition: box-shadow 0.2s;
         }
 
         .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            box-shadow: 0 3px 8px rgba(0,0,0,0.08);
         }
 
         .card-icon {
@@ -241,93 +163,195 @@
         }
 
         .card h3 {
-            margin: 0 0 1rem;
-            font-size: 1.25rem;
+            margin: 0 0 0.75rem;
+            font-size: 1.1rem;
         }
 
         .card p {
             margin: 0;
             font-size: 0.95rem;
             line-height: 1.6;
+            color: #555;
         }
 
+        /* Timeline */
         .timeline {
-            position: relative;
-            padding-left: 2rem;
-            margin: 3rem 0;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: var(--accent);
+            margin: 2rem 0;
         }
 
         .timeline-item {
+            border-left: 2px solid #e1e4e8;
+            padding-left: 1.5rem;
+            margin-bottom: 2rem;
             position: relative;
-            margin-bottom: 2.5rem;
-            padding-left: 2rem;
         }
 
         .timeline-item::before {
             content: '';
             position: absolute;
-            left: -2.5rem;
+            left: -6px;
             top: 0.25rem;
-            width: 12px;
-            height: 12px;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
-            background: var(--accent);
-            border: 3px solid white;
-            box-shadow: 0 0 0 2px var(--accent);
+            background: #0366d6;
+            border: 2px solid #fff;
         }
 
         .timeline-year {
             font-weight: 700;
-            color: var(--primary);
-            font-size: 1.25rem;
+            color: #0366d6;
+            font-size: 1.1rem;
             margin-bottom: 0.5rem;
         }
 
         .timeline-content {
-            font-size: 0.95rem;
+            color: #555;
             line-height: 1.6;
         }
 
-        .reference-link {
-            color: var(--secondary);
+        /* Info box - matching main page bottom style */
+        .info-box-section {
+            background: #f6f8fa;
+            padding: 3rem 2rem;
+            margin-top: 3rem;
+        }
+
+        .info-box-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .info-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .info-image-wrapper {
+            text-align: center;
+        }
+
+        .info-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin-bottom: 0.5rem;
+        }
+
+        .info-image-caption {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .info-image-caption a {
+            color: #0366d6;
             text-decoration: none;
-            border-bottom: 1px solid var(--secondary);
         }
 
-        .reference-link:hover {
-            opacity: 0.8;
+        .info-image-caption a:hover {
+            text-decoration: underline;
         }
 
+        .info-details dl {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.75rem 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .info-details dt {
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .info-details dd {
+            margin: 0;
+            color: #555;
+        }
+
+        .info-details ul {
+            margin: 0;
+            padding-left: 1.25rem;
+        }
+
+        .info-details li {
+            color: #555;
+        }
+
+        /* CTA box */
+        .cta-box {
+            background: #fffbf0;
+            border: 1px solid #f0e5c5;
+            border-radius: 6px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .cta-box h3 {
+            margin-top: 0;
+        }
+
+        .cta-box p {
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.6rem 1.5rem;
+            background: #0366d6;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background: #0256c4;
+        }
+
+        /* References */
         .references {
             margin-top: 3rem;
-            padding-top: 3rem;
-            border-top: 2px solid var(--border);
+            padding-top: 2rem;
+            border-top: 1px solid #e1e4e8;
+        }
+
+        .references h2 {
+            font-size: 1.5rem;
         }
 
         .references ol {
-            list-style-position: outside;
             padding-left: 2rem;
+            line-height: 1.8;
         }
 
         .references li {
             margin-bottom: 1rem;
             font-size: 0.9rem;
-            line-height: 1.6;
+            color: #555;
         }
 
+        .references a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+
+        .references a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer - matching main page */
         footer {
-            background: var(--primary);
-            color: white;
+            background: #f6f8fa;
+            border-top: 1px solid #e1e4e8;
             padding: 3rem 2rem 2rem;
             margin-top: 4rem;
         }
@@ -336,17 +360,20 @@
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
         }
 
         .footer-section h4 {
             margin-bottom: 1rem;
-            font-size: 1.1rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #1a1a1a;
         }
 
         .footer-section ul {
             list-style: none;
+            padding: 0;
         }
 
         .footer-section li {
@@ -354,71 +381,49 @@
         }
 
         .footer-section a {
-            color: rgba(255,255,255,0.8);
+            color: #0366d6;
             text-decoration: none;
-            transition: color 0.2s;
+            font-size: 0.9rem;
         }
 
         .footer-section a:hover {
-            color: white;
+            text-decoration: underline;
         }
 
         .footer-bottom {
             max-width: 1200px;
             margin: 2rem auto 0;
             padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.2);
+            border-top: 1px solid #e1e4e8;
             text-align: center;
             font-size: 0.85rem;
-            opacity: 0.8;
+            color: #666;
         }
 
-        .cta-box {
-            background: linear-gradient(135deg, #f6f8fa 0%, #ffffff 100%);
-            border: 2px solid var(--accent);
-            border-radius: 8px;
-            padding: 2rem;
-            margin: 3rem 0;
-            text-align: center;
-        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
 
-        .cta-box h3 {
-            margin-top: 0;
-            color: var(--primary);
-        }
+            .info-box-content {
+                grid-template-columns: 1fr;
+            }
 
-        .btn {
-            display: inline-block;
-            padding: 0.75rem 2rem;
-            background: var(--primary);
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: background 0.2s;
-            margin-top: 1rem;
-        }
-
-        .btn:hover {
-            background: #2c5f7c;
-        }
-
-        .highlight-box {
-            background: #fff9e6;
-            border-left: 4px solid var(--accent);
-            padding: 1.5rem;
-            margin: 2rem 0;
-            font-style: italic;
+            .info-images {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <div class="header-content">
-            <a href="https://markhopking.co.uk/" class="logo-section">
+            <a href="https://markhopking.co.uk/" class="logo-link">
                 <img src="Mark_Hopking.png" alt="Arms of Mark Hopking" class="logo-img">
                 <div class="logo-text">
                     <h1>Mark Hopking</h1>
-                    <p>Mariner • Baron • Armiger</p>
+                    <div class="subtitle">MARINER • BARON • ARMIGER</div>
                 </div>
             </a>
             <nav>
@@ -430,33 +435,14 @@
         </div>
     </header>
 
-    <div class="hero">
-        <div class="hero-content">
-            <h1>Barony of Balvill</h1>
-            <p class="hero-subtitle">A Scottish feudal barony created by Crown charter in 1630, now recognized in Scots law as incorporeal heritable property</p>
-            <div class="hero-meta">
-                <div class="hero-meta-item">
-                    <span class="hero-meta-label">Created</span>
-                    <span class="hero-meta-value">5 August 1630</span>
-                </div>
-                <div class="hero-meta-item">
-                    <span class="hero-meta-label">Confirmed</span>
-                    <span class="hero-meta-value">28 June 1633</span>
-                </div>
-                <div class="hero-meta-item">
-                    <span class="hero-meta-label">Caput</span>
-                    <span class="hero-meta-value">Balvill, Stirlingshire</span>
-                </div>
-                <div class="hero-meta-item">
-                    <span class="hero-meta-label">Current Baron</span>
-                    <span class="hero-meta-value">Mark Hopking</span>
-                </div>
-            </div>
-        </div>
+    <div class="intro-section">
+        <h2>Barony of Balvill</h2>
+        <p class="intro-subtitle">A Scottish feudal barony created by Crown charter in 1630</p>
+        <p>The Barony of Balvill is a Scottish feudal barony created by Crown charter on 5 August 1630, granted to Archibald Campbell, Lord Lorne, who would later become the 8th Earl and 1st Marquess of Argyll. Originally a territorial feudal holding, it has existed since 2004 as an incorporeal heritable dignity under Scots law. After 395 years of continuous association with the Campbell family and the Dukes of Argyll, the dignity was assigned to Mark Hopking in 2025.</p>
     </div>
 
     <div class="container">
-        <div class="content-grid">
+        <div class="content-wrapper">
             <div class="main-content">
                 <h2>Understanding Scottish Baronies</h2>
                 
@@ -486,13 +472,11 @@
                 
                 <p>The Abolition of Feudal Tenure etc. (Scotland) Act 2000 fundamentally transformed Scottish baronies. When the Act came into force on 28 November 2004, it severed the centuries-old connection between baronies and land ownership. Feudal tenure was abolished, but the "dignity of baron" was preserved as incorporeal heritable property—a legal right that can be owned, transferred, and inherited, but exists independently of any land.</p>
 
-                <div class="highlight-box">
-                    <p>Today, a Scottish barony confers no territorial jurisdiction, no automatic land ownership, and no seat in Parliament. It is a recognized dignity with historical significance, representing continuity with Scotland's feudal past while existing within modern property law.</p>
-                </div>
+                <p>Today, a Scottish barony confers no territorial jurisdiction, no automatic land ownership, and no seat in Parliament. It is a recognized dignity with historical significance, representing continuity with Scotland's feudal past while existing within modern property law.</p>
 
                 <h2>The Barony of Balvill</h2>
 
-                <p>Balvill was created as a feudal barony by King Charles I on 5 August 1630, granted to Archibald Campbell, Lord Lorne, who would later become the 8th Earl and 1st Marquess of Argyll. The charter united various lands and rights into a single barony, designating the manor place of Balvill in the Parish of Drymen, Stirlingshire, as the principal messuage or <em>caput baroniae</em>.</p>
+                <p>Balvill was created as a feudal barony by King Charles I on 5 August 1630, granted to Archibald Campbell, Lord Lorne. The charter united various lands and rights into a single barony, designating the manor place of Balvill in the Parish of Drymen, Stirlingshire, as the principal messuage or <em>caput baroniae</em>.</p>
 
                 <p>What made Balvill distinctive was its composite nature. While the caput lay in mainland Stirlingshire, the barony also incorporated holdings in the Inner Hebrides—including lands in Jura, the island of Oronsay, and territories in Colonsay—creating a geographically dispersed feudal domain that reflected the extensive Campbell territorial interests in western Scotland.</p>
 
@@ -554,69 +538,68 @@
                     <h2>References</h2>
                     <ol>
                         <li>Durie, Bruce. "The origin, nature and present state of Feudal Baronies in Scotland" (2025). Report held by the Baron of Balvill.</li>
-                        <li><em>The Records of the Parliaments of Scotland to 1707</em>, K.M. Brown et al. (eds), St Andrews, 2007–2025. Act 1587/7/143. <a href="https://www.rps.ac.uk/trans/1587/7/143" class="reference-link">Available online</a>.</li>
-                        <li><em>Abolition of Feudal Tenure etc. (Scotland) Act 2000</em> (asp 5). <a href="https://www.legislation.gov.uk/asp/2000/5" class="reference-link">legislation.gov.uk</a>.</li>
-                        <li>Scottish Barony Register. <em>Official Register of Baronies</em> (updated 27 December 2025). <a href="https://img1.wsimg.com/blobby/go/43c9880b-e09d-4df1-8b79-6eefdc172c0a/downloads/518510d8-ac16-4580-8dc4-bcde7028997f/REGISTER%20OF%20BARONIES%20271225.pdf" class="reference-link">PDF available online</a>.</li>
-                        <li>Debrett's. "The Feudal Baronies of Scotland." <a href="https://debretts.com/directories/other-titles-2/the-feudal-baronies-of-scotland/" class="reference-link">debretts.com</a>.</li>
-                        <li><em>Registrum Magni Sigilli Regum Scotorum</em> [Register of the Great Seal of Scotland], Vol. VIII (1620–1633), edited by John Maitland Thomson (Edinburgh, 1894), no. 1623. Charter dated 5 August 1630. <a href="https://archive.org/details/registrummagnisi08scot/page/540/mode/2up" class="reference-link">Available at Archive.org</a>.</li>
-                        <li><em>The Records of the Parliaments of Scotland to 1707</em>, 1633/6/92. Act in favour of Archibald Campbell, Lord Lorne (28 June 1633). <a href="http://www.rps.ac.uk/trans/1633/6/92" class="reference-link">Available online</a>.</li>
+                        <li><em>The Records of the Parliaments of Scotland to 1707</em>, K.M. Brown et al. (eds), St Andrews, 2007–2025. Act 1587/7/143. <a href="https://www.rps.ac.uk/trans/1587/7/143">Available online</a>.</li>
+                        <li><em>Abolition of Feudal Tenure etc. (Scotland) Act 2000</em> (asp 5). <a href="https://www.legislation.gov.uk/asp/2000/5">legislation.gov.uk</a>.</li>
+                        <li>Scottish Barony Register. <em>Official Register of Baronies</em> (updated 27 December 2025). <a href="https://img1.wsimg.com/blobby/go/43c9880b-e09d-4df1-8b79-6eefdc172c0a/downloads/518510d8-ac16-4580-8dc4-bcde7028997f/REGISTER%20OF%20BARONIES%20271225.pdf">PDF available online</a>.</li>
+                        <li>Debrett's. "The Feudal Baronies of Scotland." <a href="https://debretts.com/directories/other-titles-2/the-feudal-baronies-of-scotland/">debretts.com</a>.</li>
+                        <li><em>Registrum Magni Sigilli Regum Scotorum</em> [Register of the Great Seal of Scotland], Vol. VIII (1620–1633), edited by John Maitland Thomson (Edinburgh, 1894), no. 1623. Charter dated 5 August 1630. <a href="https://archive.org/details/registrummagnisi08scot/page/540/mode/2up">Available at Archive.org</a>.</li>
+                        <li><em>The Records of the Parliaments of Scotland to 1707</em>, 1633/6/92. Act in favour of Archibald Campbell, Lord Lorne (28 June 1633). <a href="http://www.rps.ac.uk/trans/1633/6/92">Available online</a>.</li>
                     </ol>
                 </div>
             </div>
+        </div>
+    </div>
 
-            <aside class="sidebar">
-                <div class="info-card">
-                    <h3>Barony Details</h3>
-                    <dl>
-                        <dt>Created</dt>
-                        <dd>5 August 1630</dd>
-                        
-                        <dt>Confirmation</dt>
-                        <dd>28 June 1633 (Act of Parliament)</dd>
-                        
-                        <dt>Original grantee</dt>
-                        <dd>Archibald Campbell, Lord Lorne</dd>
-                        
-                        <dt>Caput</dt>
-                        <dd>Balvill, Parish of Drymen, Stirlingshire</dd>
-                        
-                        <dt>Held by Argyll</dt>
-                        <dd>1630–2025 (395 years)</dd>
-                        
-                        <dt>Current holder</dt>
-                        <dd>Mark Hopking (since 2025)</dd>
-                        
-                        <dt>Legal status</dt>
-                        <dd>Incorporeal heritable property</dd>
-                    </dl>
+    <div class="info-box-section">
+        <div class="info-box-content">
+            <div class="info-images">
+                <div class="info-image-wrapper">
+                    <img src="Mark_Hopking.png" alt="Arms of Mark Hopking" class="info-image">
+                    <div class="info-image-caption">
+                        <a href="https://heraldry.markhopking.co.uk/">Arms of Mark Hopking</a>
+                    </div>
                 </div>
-
-                <div class="info-card">
-                    <h3>Documentation</h3>
-                    <dl>
-                        <dt>Crown Charter</dt>
-                        <dd>Register of Great Seal, Vol. VIII, No. 1623</dd>
-                        
-                        <dt>Parliamentary Act</dt>
-                        <dd>1633/6/92</dd>
-                        
-                        <dt>Registry</dt>
-                        <dd>Scottish Barony Register</dd>
-                        
-                        <dt>Listed in</dt>
-                        <dd>Debrett's Baronies of Scotland</dd>
-                    </dl>
+                <div class="info-image-wrapper">
+                    <img src="Hopking-Tartan.jpg" alt="Hopking tartan" class="info-image">
+                    <div class="info-image-caption">
+                        <a href="https://www.tartanregister.gov.uk/tartanDetails?ref=12619">Hopking tartan (registered)</a>
+                    </div>
                 </div>
-
-                <div class="info-card">
-                    <h3>Related Resources</h3>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 0.75rem;"><a href="https://heraldry.markhopking.co.uk/" class="reference-link">Heraldry & Armorial Achievement</a></li>
-                        <li style="margin-bottom: 0.75rem;"><a href="https://genealogy.markhopking.co.uk/" class="reference-link">Genealogy & Lineage</a></li>
-                        <li style="margin-bottom: 0.75rem;"><a href="/history.html" class="reference-link">Full History of Balvill</a></li>
-                    </ul>
-                </div>
-            </aside>
+            </div>
+            <div class="info-details">
+                <dl>
+                    <dt>Created</dt>
+                    <dd>5 August 1630</dd>
+                    
+                    <dt>Confirmation</dt>
+                    <dd>28 June 1633 (Act of Parliament)</dd>
+                    
+                    <dt>Original grantee</dt>
+                    <dd>Archibald Campbell, Lord Lorne</dd>
+                    
+                    <dt>Caput</dt>
+                    <dd>Balvill, Parish of Drymen, Stirlingshire</dd>
+                    
+                    <dt>Held by Argyll</dt>
+                    <dd>1630–2025 (395 years)</dd>
+                    
+                    <dt>Current holder</dt>
+                    <dd>Mark Hopking (since 2025)</dd>
+                    
+                    <dt>Legal status</dt>
+                    <dd>Incorporeal heritable property</dd>
+                    
+                    <dt>Documentation</dt>
+                    <dd>
+                        <ul>
+                            <li>Crown Charter (Reg. Mag. Sig. Vol. VIII, No. 1623)</li>
+                            <li>Parliamentary Act (1633/6/92)</li>
+                            <li>Scottish Barony Register</li>
+                            <li>Debrett's Baronies of Scotland</li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
         </div>
     </div>
 
